@@ -92,8 +92,8 @@ img { max-width: 100%; }
   align-items: center;
 }
 .footer-shell img { width:270px; }
-.footer-shell p { margin:0; font-size:.9rem; }
-.footer-shell p:last-child { text-align:right; }
+.footer-shell p { margin:0; font-size:.9rem; color: rgba(255,255,255,0.92); }
+.footer-shell p:last-child { text-align:right; color: rgba(255,255,255,0.75); }
 .footer-shell span { color:var(--octc-gold); padding:0 8px; }
 
 .playbook-page { max-width: var(--reading); margin: 36px auto 70px; padding: 0 24px; }
