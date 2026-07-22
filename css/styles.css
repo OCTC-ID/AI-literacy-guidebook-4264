@@ -23,10 +23,21 @@ body{
     line-height:1.6;
 }
 
-header{
-    background:var(--octc-blue);
-    color:white;
-    padding:30px;
+header {
+    background: var(--octc-blue);
+    color: white;
+    padding: 30px max(24px, calc((100% - 1400px) / 2));
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    width: calc(100% - 48px);
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 0;
 }
 
 header h1{
