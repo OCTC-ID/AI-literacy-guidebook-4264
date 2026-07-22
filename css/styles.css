@@ -26,7 +26,7 @@ img { max-width: 100%; }
 .visually-hidden { position:absolute!important; width:1px!important; height:1px!important; padding:0!important; margin:-1px!important; overflow:hidden!important; clip:rect(0,0,0,0)!important; white-space:nowrap!important; border:0!important; }
 
 /* Header and navigation */
-.site-header { background: linear-gradient(105deg, var(--octc-blue-dark), var(--octc-blue)); border-bottom: 5px solid rgba(231,166,20,.95); }
+.site-header { background: linear-gradient(105deg, var(--octc-blue-dark), var(--octc-blue)); border-bottom: 4px solid rgba(231,166,20,.95); }
 .nav-shell { max-width: var(--content); min-height: 106px; margin: 0 auto; padding: 15px 24px; display: flex; align-items: center; gap: 30px; }
 .logo-link { display: block; flex: 0 0 285px; }
 .logo-link img { display: block; width: 285px; height: auto; }
@@ -135,7 +135,7 @@ img { max-width: 100%; }
 /* Footer */
 .site-footer {
   padding: 0;
-  border-top: 3px solid var(--octc-gold);
+  border-top: 4px solid var(--octc-gold);
   background: linear-gradient(105deg, var(--octc-blue-dark), var(--octc-blue));
   color: white;
 }
