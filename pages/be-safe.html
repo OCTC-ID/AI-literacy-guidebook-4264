@@ -1,1 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OCTC AI Literacy Faculty Playbook – BE Safe</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
+  body {
+    background: #ffffff;
+    font-family: Arial, Helvetica, "Segoe UI", sans-serif;
+    color: #111111;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 28px 24px;
+  }
+
+  .print-btn { display: block; margin-bottom: 20px; text-align: right; }
+    .print-btn button {
+    font-family: Arial, Helvetica, "Segoe UI", sans-serif;
+    font-size: 11px; font-weight: 600;
+    background: #f0f0f0; color: #555555;
+    border: 1px solid #cccccc; padding: 5px 14px;
+    cursor: pointer; letter-spacing: 0.04em;
+    text-transform: uppercase; border-radius: 3px;
+  }
+  .print-btn button:hover { background: #6B21A8; }
+
+  .playbook-header { background: #4B2E83; padding: 28px 32px; margin-bottom: 4px; }
+  .playbook-label { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #D4BBFF; margin-bottom: 4px; }
+  .playbook-tagline { font-size: 12px; font-weight: 600; color: #D4BBFF; letter-spacing: 0.06em; margin-bottom: 16px; font-style: italic; }
+  .be-title { font-size: 36px; font-weight: 800; color: #ffffff; line-height: 1.1; margin-bottom: 6px; }
+  .be-subtitle { font-size: 15px; font-weight: 600; color: #F2D024; letter-spacing: 0.04em; margin-bottom: 14px; }
+  .ican-headline { font-size: 13px; font-weight: 400; color: #E9D5FF; line-height: 1.6; font-style: italic; }
+  .ican-headline strong { font-weight: 700; color: #ffffff; font-style: normal; }
+
+  .behavior-bar { background: #F2D024; color: #111111; padding: 10px 32px; font-size: 13px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 24px; }
+
+  .purpose-box { background: #F3F0FF; border-left: 5px solid #4B2E83; padding: 18px 22px; margin-bottom: 28px; }
+  .purpose-box .box-label { font-size: 11px; font-weight: 800; color: #4B2E83; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 8px; }
+  .purpose-box p { font-size: 14px; line-height: 1.7; color: #111111; margin-bottom: 8px; }
+  .purpose-box p:last-child { margin-bottom: 0; }
+  .purpose-box .development-note { font-size: 13px; font-weight: 700; color: #4B2E83; }
+  .purpose-box .coaching-note { font-size: 13px; font-weight: 700; color: #4B2E83; font-style: italic; }
+
+  .section { margin-bottom: 28px; }
+  .section-title { font-size: 15px; font-weight: 800; color: #4B2E83; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 14px; padding-bottom: 7px; border-bottom: 3px solid #F2D024; display: block; }
+
+  .progression-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-bottom: 10px; }
+  .progression-card { background: #F3F0FF; padding: 16px; border-top: 4px solid #4B2E83; }
+  .progression-card h4 { font-size: 13px; font-weight: 800; color: #4B2E83; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+  .progression-card .stage-sub { font-size: 11px; font-weight: 700; color: #4B2E83; margin-bottom: 10px; font-style: italic; }
+  .progression-card p { font-size: 13px; line-height: 1.65; color: #111111; font-weight: 400; }
+  .progression-note { font-size: 12px; color: #111111; font-style: italic; margin-top: 8px; line-height: 1.6; font-weight: 600; }
+
+  .ican-list, .obs-list, .fit-list, .tips-list { list-style: none; padding: 0; }
+
+  .ican-list li { font-size: 15px; line-height: 1.65; color: #111111; padding: 8px 0 8px 28px; margin-bottom: 8px; position: relative; font-weight: 400; }
+  .ican-list li::before { content: "▶"; color: #F2D024; font-size: 13px; font-weight: 800; position: absolute; left: 2px; top: 10px; }
+  .ican-list li strong { color: #4B2E83; font-weight: 800; margin-right: 3px; }
+
+  .obs-list li, .fit-list li { font-size: 15px; line-height: 1.65; color: #111111; padding: 8px 0 8px 28px; margin-bottom: 4px; border-bottom: 1px solid #D4BBFF; position: relative; font-weight: 400; }
+  .obs-list li:last-child, .fit-list li:last-child { border-bottom: none; }
+  .obs-list li::before { content: "✓"; color: #4B2E83; font-weight: 800; font-size: 15px; position: absolute; left: 4px; top: 9px; }
+  .fit-list li::before { content: "→"; color: #4B2E83; font-weight: 800; font-size: 15px; position: absolute; left: 4px; top: 9px; }
+
+  .example-note { background: #FBFAFE; border-left: 4px solid #D4BBFF; padding: 12px 14px; margin-bottom: 14px; font-size: 13px; line-height: 1.6; color: #3D3550; font-style: italic; }
+
+  .bb-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 4px; }
+  .bb-card { background: #F3F0FF; padding: 16px; border-top: 4px solid #6B21A8; }
+  .bb-card h4 { font-size: 13px; font-weight: 800; color: #4B2E83; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+  .bb-card .bb-idea { font-size: 13px; line-height: 1.6; color: #111111; margin-bottom: 10px; font-weight: 400; }
+  .bb-card .bb-prompt-label { font-size: 10px; font-weight: 800; color: #4B2E83; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 5px; }
+  .bb-card .bb-prompt { font-size: 12px; line-height: 1.6; color: #111111; background: #ffffff; border-left: 3px solid #F2D024; padding: 8px 10px; font-style: italic; font-weight: 600; }
+
+  .tips-section { background: #4B2E83; padding: 24px 28px; margin-top: 4px; }
+  .tips-section .section-title { color: #F2D024; border-bottom-color: rgba(242,208,36,0.4); }
+  .tips-list li { font-size: 15px; line-height: 1.65; color: #ffffff; padding: 8px 0 8px 20px; border-bottom: 1px solid rgba(255,255,255,0.15); position: relative; font-weight: 400; }
+  .tips-list li:last-child { border-bottom: none; }
+  .tips-list li::before { content: "→"; color: #F2D024; font-weight: 700; position: absolute; left: 0; top: 8px; }
+
+  .reflection-list { list-style: none; padding: 0; counter-reset: reflect-counter; }
+  .reflection-list li { font-size: 15px; line-height: 1.65; color: #111111; padding: 10px 0 10px 36px; border-bottom: 1px solid #D4BBFF; position: relative; font-weight: 400; counter-increment: reflect-counter; }
+  .reflection-list li:last-child { border-bottom: none; }
+  .reflection-list li::before { content: counter(reflect-counter); background: #4B2E83; color: #ffffff; font-size: 11px; font-weight: 800; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: absolute; left: 0; top: 11px; }
+
+  .page-footer { margin-top: 24px; padding-top: 12px; border-top: 2px solid #D4BBFF; font-size: 11px; color: #111111; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+  .footer-note { font-size: 11px; color: #111111; font-weight: 400; font-style: italic; margin-bottom: 6px; line-height: 1.5; text-transform: none; letter-spacing: 0; }
+
+  @media print {
+    @page { size: 8.5in 11in; margin: 0.55in 0.6in; }
+    body { max-width: 100%; padding: 0; font-size: 13px; }
+    .print-btn { display: none; }
+    .playbook-header, .behavior-bar, .purpose-box, .progression-card, .bb-card, .tips-section, .example-note { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .progression-grid { grid-template-columns: 1fr 1fr 1fr; }
+    .bb-grid { grid-template-columns: 1fr 1fr; }
+    .section-title { font-size: 13px; }
+    .be-title { font-size: 30px; }
+    .section, .progression-card, .bb-card, .tips-section { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div style="margin-bottom:18px;">
+  <a href="../index.html"
+     style="color:#4B2E83;font-weight:700;text-decoration:none;">
+    ← Back to AI Literacy Playbook
+  </a>
+</div>
+  <div class="print-btn"><button onclick="window.print()">Print / Save as PDF</button></div>
+
+  <div class="playbook-header">
+    <div class="playbook-label">OCTC AI Literacy Faculty Playbook</div>
+    <div class="playbook-tagline">Teaching AI Judgment, One Habit at a Time.</div>
+    <div class="be-title">BE Safe</div>
+    <div class="be-subtitle">Know what you're playing with.</div>
+    <div class="ican-headline"><strong>I Can:</strong> I can explain what AI is and how it works well enough to make smart decisions about how I use it and what I share.</div>
+  </div>
+
+  <div class="behavior-bar">Developing Professional Judgment &nbsp;·&nbsp; Student AI Literacy</div>
+
+  <div class="purpose-box">
+    <div class="box-label">Purpose</div>
+    <p>AI tools are increasingly present in academic, professional, and personal life — but confidence with a tool is not the same as understanding it. BE Safe is about closing that gap.</p>
+    <p>Students who are safe AI users know enough about how AI works to make deliberate decisions: about what they share, about when to trust output, and about why a confident-sounding response isn't necessarily a correct one. This behavior establishes the foundational awareness that makes every other BE behavior possible.</p>
+    <p class="development-note">Students develop this capability through repeated opportunities to engage, reflect, and make increasingly informed decisions over time.</p>
+    <p class="coaching-note">This is a coaching resource — not a grading rubric unless intentionally connected to a course learning outcome.</p>
+  </div>
+
+  <div class="section">
+    <span class="section-title">Developmental Progression</span>
+    <div class="progression-grid">
+      <div class="progression-card">
+        <h4>Introduction</h4>
+        <div class="stage-sub">FYE 100</div>
+        <p>Students are introduced to the idea that AI tools have underlying mechanics worth understanding. They may not yet have examined what AI actually is or how it generates responses. The goal here is awareness — establishing that AI is a system with limitations, not an oracle.</p>
+      </div>
+      <div class="progression-card">
+        <h4>Exploration</h4>
+        <div class="stage-sub">Across First-Year Courses</div>
+        <p>Students begin developing a working mental model of how AI generates output. They recognize that AI can be wrong and are starting to think about what that means before acting on its output. They are also becoming more conscious about what they share with AI tools, even if that judgment is not yet consistent.</p>
+      </div>
+      <div class="progression-card">
+        <h4>Application</h4>
+        <div class="stage-sub">Program &amp; Workplace Contexts</div>
+        <p>Students understand how AI works well enough to make deliberate decisions every time — not just when prompted. They know why AI gets things wrong, why what they share matters, and why confident-sounding output is not the same as accurate output. That understanding is operational: it shapes behavior in new and unfamiliar contexts.</p>
+      </div>
+    </div>
+    <div class="progression-note">Progression is developmental, not linear. Students may move fluidly between stages depending on the task, the tool, or the course context.</div>
+  </div>
+
+  <div class="section">
+    <span class="section-title">I Can Statements</span>
+    <ul class="ican-list">
+      <li><strong>I can</strong> describe in my own words how AI generates a response — well enough to explain why it might be wrong.</li>
+      <li><strong>I can</strong> make thoughtful decisions about what personal, academic, or professional information I share with an AI tool.</li>
+      <li><strong>I can</strong> recognize the difference between AI output that sounds confident and output that is actually accurate or reliable.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <span class="section-title">What This Looks Like · Habits in Practice</span>
+    <ul class="obs-list">
+      <li>Pauses before acting on AI output rather than treating it as a final answer</li>
+      <li>Can articulate at least one reason why AI might produce inaccurate or misleading information</li>
+      <li>Makes visible choices about what to share with AI tools — and can explain those choices</li>
+      <li>Asks follow-up questions of AI output rather than accepting the first response</li>
+      <li>Notices when AI output sounds plausible but does not match what they already know to be true</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <span class="section-title">Where This Fits Naturally</span>
+    <ul class="fit-list">
+      <li>Any assignment where students use AI to generate, summarize, research, or troubleshoot</li>
+      <li>Discussions or activities involving AI-generated content as a starting point</li>
+      <li>Technical or clinical courses where acting on bad information carries real consequences</li>
+      <li>Research and information literacy activities across all disciplines</li>
+      <li>Orientation and first-year experience contexts where AI norms are being established</li>
+      <li>Reflection activities that ask students to describe how they used a tool and why</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <span class="section-title">Blackboard Ultra Quick Wins</span>
+    <div class="example-note">These are examples — not requirements. Choose the ideas that fit naturally into your course, assignment, and students' level of experience.</div>
+    <div class="bb-grid">
+
+      <div class="bb-card">
+        <h4>Discussion</h4>
+        <div class="bb-idea">Post a brief AI-generated response on a course-relevant topic and ask students to discuss whether they would trust it — and why or why not.</div>
+        <div class="bb-prompt-label">Sample Prompt</div>
+        <div class="bb-prompt">"Here's what an AI said about [course topic]. What would you want to verify before using this? What concerns you, if anything?"</div>
+      </div>
+
+      <div class="bb-card">
+        <h4>Journal</h4>
+        <div class="bb-idea">Ask students to document a moment when they used or considered using an AI tool and reflect on what they knew — or didn't know — about how it worked.</div>
+        <div class="bb-prompt-label">Sample Prompt</div>
+        <div class="bb-prompt">"Describe a recent time you used an AI tool. What did you assume it could do? What do you know now that you didn't know then?"</div>
+      </div>
+
+      <div class="bb-card">
+        <h4>Video Studio</h4>
+        <div class="bb-idea">Have students record a short explainer describing how AI generates a response — as if explaining it to someone who has never used it before.</div>
+        <div class="bb-prompt-label">Sample Prompt</div>
+        <div class="bb-prompt">"Record a 60–90 second video explaining how an AI tool generates a response. Don't look it up — use what you already understand."</div>
+      </div>
+
+      <div class="bb-card">
+        <h4>Assignment</h4>
+        <div class="bb-idea">Give students a set of AI-generated responses to the same prompt and ask them to rank by trustworthiness — with written justification.</div>
+        <div class="bb-prompt-label">Sample Prompt</div>
+        <div class="bb-prompt">"Here are three AI responses to the same question. Rank them from most to least trustworthy and explain your reasoning for each."</div>
+      </div>
+
+      <div class="bb-card">
+        <h4>AI Chat Conversation</h4>
+        <div class="bb-idea">Set up a structured AI conversation where students ask the AI to explain its own limitations — then reflect on whether that explanation itself is trustworthy.</div>
+        <div class="bb-prompt-label">Sample Prompt</div>
+        <div class="bb-prompt">"Ask the AI: 'What kinds of questions are you most likely to get wrong, and why?' Then write two sentences about whether you believe its answer."</div>
+      </div>
+
+      <div class="bb-card">
+        <h4>Knowledge Check</h4>
+        <div class="bb-idea">Use low-stakes scenario questions to assess whether students can identify situations where AI use would require extra caution — not right or wrong, but reasoned choices.</div>
+        <div class="bb-prompt-label">Sample Prompt</div>
+        <div class="bb-prompt">"A classmate uses AI to summarize a medical article and submits it as research. What are two things they should have done before trusting the AI's version?"</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="tips-section">
+    <span class="section-title">Supporting Student Growth</span>
+    <ul class="tips-list">
+      <li>BE Safe is not a technology lesson — it is a judgment lesson. The goal is not for students to understand AI architectures; it is for them to know enough to make smart choices.</li>
+      <li>Avoid framing this as "AI is dangerous." The goal is calibration, not fear. Students who are overly skeptical will not use tools well either.</li>
+      <li>The most revealing question you can ask is "why did you trust that?" — not "is this right?" Build that into your feedback habits.</li>
+      <li>In technical and health sciences courses, connect BE Safe to the professional consequences of trusting unverified output in the field.</li>
+      <li>You do not need to be an AI expert to teach this. Modeling your own uncertainty — "I'm not sure how the tool handles this; let's find out together" — is itself a powerful demonstration of the behavior.</li>
+      <li>Resist the impulse to turn this into AI policing. The goal is to build students' internal judgment, not to catch them misusing tools. Coaching language opens that conversation; punitive language closes it.</li>
+    </ul>
+  </div>
+
+  <div class="section" style="margin-top: 28px;">
+    <span class="section-title">Student Reflection Prompts</span>
+    <ol class="reflection-list">
+      <li>What do you actually know about how AI generates a response? Where does that knowledge come from — and how confident are you in it?</li>
+      <li>Have you ever acted on AI output without questioning it? What happened — or what could have happened?</li>
+      <li>What kinds of information would you be comfortable sharing with an AI tool? What would you hold back? Why?</li>
+      <li>If AI output sounds completely confident and completely wrong at the same time, how would you know?</li>
+      <li>How has your sense of what AI can and cannot do changed since you started using it?</li>
+    </ol>
+  </div>
+
+  <div class="page-footer">
+    <div class="footer-note">This guide supports the OCTC AI Literacy Framework, a student-centered translation of the Digital Education Council (DEC) AI Literacy Framework.</div>
+    OCTC AI Literacy Faculty Playbook &nbsp;·&nbsp; BE Safe &nbsp;·&nbsp; Version 1.0
+  </div>
+
+</body>
+</html>
