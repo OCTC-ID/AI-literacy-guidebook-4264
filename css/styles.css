@@ -196,7 +196,12 @@ img { max-width: 100%; }
   .logo-link, .logo-link img { width:225px; }
   .site-links a { padding:10px 8px; font-size:.86rem; }
   .hero-inner { padding:42px 18px 36px; }
-  .title-lockup { align-items:flex-start; gap:10px; }
+ .title-lockup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
   .book-mark { font-size:3rem; }
   .hero h1 { font-size:2.7rem; }
   .be-card-grid { grid-template-columns:1fr; }
