@@ -1,264 +1,146 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>OCTC AI Literacy Faculty Playbook – BE Responsible</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  body {
-    background: #ffffff;
-    font-family: Arial, Helvetica, "Segoe UI", sans-serif;
-    color: #111111;
-    max-width: 820px;
-    margin: 0 auto;
-    padding: 28px 24px;
-  }
+<link href="../css/styles.css" rel="stylesheet"/></head>
+<body class="guide-page"><nav aria-label="Playbook navigation" class="site-nav"><div class="site-nav-inner"><a class="site-brand" href="../index.html">AI Literacy Playbook</a><div class="site-links"><a href="be-safe.html">BE Safe</a><a href="be-honest.html">BE Honest</a><a href="be-critical.html">BE Critical</a><a aria-current="page" href="be-responsible.html">BE Responsible</a><a href="be-reflective.html">BE Reflective</a></div></div></nav><main class="playbook-page">
 
-  .print-btn { display: block; margin-bottom: 20px; text-align: right; }
-  .print-btn button {
-    font-family: Arial, Helvetica, "Segoe UI", sans-serif;
-    font-size: 11px; font-weight: 600;
-    background: #f0f0f0; color: #555555;
-    border: 1px solid #cccccc; padding: 5px 14px;
-    cursor: pointer; letter-spacing: 0.04em;
-    text-transform: uppercase; border-radius: 3px;
-  }
-  .print-btn button:hover { background: #e0e0e0; }
 
-  .playbook-header { background: #4B2E83; padding: 28px 32px; margin-bottom: 4px; }
-  .playbook-label { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #D4BBFF; margin-bottom: 4px; }
-  .playbook-tagline { font-size: 12px; font-weight: 600; color: #D4BBFF; letter-spacing: 0.06em; margin-bottom: 16px; font-style: italic; }
-  .be-title { font-size: 36px; font-weight: 800; color: #ffffff; line-height: 1.1; margin-bottom: 6px; }
-  .be-subtitle { font-size: 15px; font-weight: 600; color: #F2D024; letter-spacing: 0.04em; margin-bottom: 14px; }
-  .ican-headline { font-size: 13px; font-weight: 400; color: #E9D5FF; line-height: 1.6; font-style: italic; }
-  .ican-headline strong { font-weight: 700; color: #ffffff; font-style: normal; }
-
-  .behavior-bar { background: #F2D024; color: #111111; padding: 10px 32px; font-size: 13px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 24px; }
-
-  .purpose-box { background: #F3F0FF; border-left: 5px solid #4B2E83; padding: 18px 22px; margin-bottom: 28px; }
-  .purpose-box .box-label { font-size: 11px; font-weight: 800; color: #4B2E83; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 8px; }
-  .purpose-box p { font-size: 14px; line-height: 1.7; color: #111111; margin-bottom: 8px; }
-  .purpose-box p:last-child { margin-bottom: 0; }
-  .purpose-box .development-note { font-size: 13px; font-weight: 700; color: #4B2E83; }
-  .purpose-box .coaching-note { font-size: 13px; font-weight: 700; color: #4B2E83; font-style: italic; }
-
-  .section { margin-bottom: 28px; }
-  .section-title { font-size: 15px; font-weight: 800; color: #4B2E83; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 14px; padding-bottom: 7px; border-bottom: 3px solid #F2D024; display: block; }
-
-  .progression-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-bottom: 10px; }
-  .progression-card { background: #F3F0FF; padding: 16px; border-top: 4px solid #4B2E83; }
-  .progression-card h4 { font-size: 13px; font-weight: 800; color: #4B2E83; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
-  .progression-card .stage-sub { font-size: 11px; font-weight: 700; color: #4B2E83; margin-bottom: 10px; font-style: italic; }
-  .progression-card p { font-size: 13px; line-height: 1.65; color: #111111; font-weight: 400; }
-  .progression-note { font-size: 12px; color: #111111; font-style: italic; margin-top: 8px; line-height: 1.6; font-weight: 600; }
-
-  .ican-list, .obs-list, .fit-list, .tips-list { list-style: none; padding: 0; }
-
-  .ican-list li { font-size: 15px; line-height: 1.65; color: #111111; padding: 8px 0 8px 28px; margin-bottom: 8px; position: relative; font-weight: 400; }
-  .ican-list li::before { content: "▶"; color: #F2D024; font-size: 13px; font-weight: 800; position: absolute; left: 2px; top: 10px; }
-  .ican-list li strong { color: #4B2E83; font-weight: 800; margin-right: 3px; }
-
-  .obs-list li, .fit-list li { font-size: 15px; line-height: 1.65; color: #111111; padding: 8px 0 8px 28px; margin-bottom: 4px; border-bottom: 1px solid #D4BBFF; position: relative; font-weight: 400; }
-  .obs-list li:last-child, .fit-list li:last-child { border-bottom: none; }
-  .obs-list li::before { content: "✓"; color: #4B2E83; font-weight: 800; font-size: 15px; position: absolute; left: 4px; top: 9px; }
-  .fit-list li::before { content: "→"; color: #4B2E83; font-weight: 800; font-size: 15px; position: absolute; left: 4px; top: 9px; }
-
-  .example-note { background: #FBFAFE; border-left: 4px solid #D4BBFF; padding: 12px 14px; margin-bottom: 14px; font-size: 13px; line-height: 1.6; color: #3D3550; font-style: italic; }
-
-  .bb-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 4px; }
-  .bb-card { background: #F3F0FF; padding: 16px; border-top: 4px solid #6B21A8; }
-  .bb-card h4 { font-size: 13px; font-weight: 800; color: #4B2E83; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
-  .bb-card .bb-idea { font-size: 13px; line-height: 1.6; color: #111111; margin-bottom: 10px; font-weight: 400; }
-  .bb-card .bb-prompt-label { font-size: 10px; font-weight: 800; color: #4B2E83; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 5px; }
-  .bb-card .bb-prompt { font-size: 12px; line-height: 1.6; color: #111111; background: #ffffff; border-left: 3px solid #F2D024; padding: 8px 10px; font-style: italic; font-weight: 600; }
-
-  .tips-section { background: #4B2E83; padding: 24px 28px; margin-top: 4px; }
-  .tips-section .section-title { color: #F2D024; border-bottom-color: rgba(242,208,36,0.4); }
-  .tips-list li { font-size: 15px; line-height: 1.65; color: #ffffff; padding: 8px 0 8px 20px; border-bottom: 1px solid rgba(255,255,255,0.15); position: relative; font-weight: 400; }
-  .tips-list li:last-child { border-bottom: none; }
-  .tips-list li::before { content: "→"; color: #F2D024; font-weight: 700; position: absolute; left: 0; top: 8px; }
-
-  .reflection-list { list-style: none; padding: 0; counter-reset: reflect-counter; }
-  .reflection-list li { font-size: 15px; line-height: 1.65; color: #111111; padding: 10px 0 10px 36px; border-bottom: 1px solid #D4BBFF; position: relative; font-weight: 400; counter-increment: reflect-counter; }
-  .reflection-list li:last-child { border-bottom: none; }
-  .reflection-list li::before { content: counter(reflect-counter); background: #4B2E83; color: #ffffff; font-size: 11px; font-weight: 800; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: absolute; left: 0; top: 11px; }
-
-  .page-footer { margin-top: 24px; padding-top: 12px; border-top: 2px solid #D4BBFF; font-size: 11px; color: #111111; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
-  .footer-note { font-size: 11px; color: #111111; font-weight: 400; font-style: italic; margin-bottom: 6px; line-height: 1.5; text-transform: none; letter-spacing: 0; }
-
-  @media print {
-    @page { size: 8.5in 11in; margin: 0.55in 0.6in; }
-    body { max-width: 100%; padding: 0; font-size: 13px; }
-    .print-btn { display: none; }
-    .playbook-header, .behavior-bar, .purpose-box, .progression-card, .bb-card, .tips-section, .example-note { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-    .progression-grid { grid-template-columns: 1fr 1fr 1fr; }
-    .bb-grid { grid-template-columns: 1fr 1fr; }
-    .section-title { font-size: 13px; }
-    .be-title { font-size: 30px; }
-    .section, .progression-card, .bb-card, .tips-section { break-inside: avoid; }
-  }
-</style>
-</head>
-<body>
-<div style="margin-bottom:18px;">
-  <a href="../index.html"
-     style="color:#4B2E83;font-weight:700;text-decoration:none;">
-    ← Back to AI Literacy Playbook
-  </a>
+<div class="playbook-header">
+<div class="playbook-label">OCTC AI Literacy Faculty Playbook</div>
+<div class="playbook-tagline">Teaching AI Judgment, One Habit at a Time.</div>
+<div class="be-title">BE Responsible</div>
+<div class="be-subtitle">Choose on purpose — not on autopilot.</div>
+<div class="ican-headline"><strong>I Can:</strong> I can use AI intentionally and responsibly — making deliberate decisions about when and how to use it, considering the impact on others, and taking ownership of the outcomes.</div>
 </div>
-  <div class="print-btn"><button onclick="window.print()">Print / Save as PDF</button></div>
-
-  <div class="playbook-header">
-    <div class="playbook-label">OCTC AI Literacy Faculty Playbook</div>
-    <div class="playbook-tagline">Teaching AI Judgment, One Habit at a Time.</div>
-    <div class="be-title">BE Responsible</div>
-    <div class="be-subtitle">Choose on purpose — not on autopilot.</div>
-    <div class="ican-headline"><strong>I Can:</strong> I can use AI intentionally and responsibly — making deliberate decisions about when and how to use it, considering the impact on others, and taking ownership of the outcomes.</div>
+<div class="behavior-bar">Developing Professional Judgment  ·  Student AI Literacy</div>
+<div class="purpose-box">
+<div class="box-label">Purpose</div>
+<p>Using AI is easy. Using it well requires something harder: a deliberate decision. BE Responsible is about moving from default to intentional — from "I used AI because it was there" to "I chose to use AI because it was the right tool for this task, in this context, for these reasons."</p>
+<p>Students who practice BE Responsible don't just use AI — they decide to use it, and they own what comes out the other side. That ownership extends to the people their work affects: classmates, patients, clients, employers, and communities.</p>
+<p class="development-note">Students develop this capability through repeated opportunities to make visible choices, reflect on their reasoning, and experience the consequences — positive and negative — of their AI use decisions.</p>
+<p class="coaching-note">This is a coaching resource — not a grading rubric unless intentionally connected to a course learning outcome.</p>
+</div>
+<div class="section">
+<span class="section-title">Developmental Progression</span>
+<div class="progression-grid">
+<div class="progression-card">
+<h4>Introduction</h4>
+<div class="stage-sub">FYE 100</div>
+<p>Students use AI when it's convenient or when a task feels hard — not because they've made a deliberate choice. The decision to use AI isn't really a decision yet; it's a default. The goal is naming the choice: helping students recognize that using AI is a decision that can be made intentionally — or not made at all.</p>
+</div>
+<div class="progression-card">
+<h4>Exploration</h4>
+<div class="stage-sub">Across First-Year Courses</div>
+<p>Students are starting to make conscious choices about when and how to use AI. They consider whether it's appropriate for the task and context, and they're aware that not using AI is a valid option. Their decision-making is developing but not yet consistent — they may still default to AI in some situations without really thinking it through.</p>
+</div>
+<div class="progression-card">
+<h4>Application</h4>
+<div class="stage-sub">Program &amp; Workplace Contexts</div>
+<p>Every AI use decision is a deliberate one — made with awareness of the task, the context, their own tendencies, and the people affected. Students take full ownership of everything they produce, regardless of how AI was involved. They can articulate why they used AI, why they didn't, and what they would do differently.</p>
+</div>
+</div>
+<div class="progression-note">Progression is developmental, not linear. Students may move fluidly between stages depending on the task, the tool, or the course context.</div>
+</div>
+<div class="section">
+<span class="section-title">I Can Statements</span>
+<ul class="ican-list">
+<li><strong>I can</strong> make a deliberate decision about whether to use AI for a specific task — and explain my reasoning.</li>
+<li><strong>I can</strong> identify who might be affected by my AI use and consider that impact before I act.</li>
+<li><strong>I can</strong> take full ownership of my work and its outcomes, regardless of how AI was involved in creating it.</li>
+</ul>
+</div>
+<div class="section">
+<span class="section-title">What This Looks Like · Habits in Practice</span>
+<ul class="obs-list">
+<li>Makes a visible choice about whether to use AI before beginning a task — not a default</li>
+<li>Can explain why AI was or wasn't the right tool for a specific task in a specific context</li>
+<li>Considers who else might be affected by their AI use before acting</li>
+<li>Takes ownership of AI-assisted work — including its errors, gaps, and consequences</li>
+<li>Recognizes that not using AI is a legitimate and sometimes better choice</li>
+</ul>
+</div>
+<div class="section">
+<span class="section-title">Where This Fits Naturally</span>
+<ul class="fit-list">
+<li>Any assignment where students have discretion about whether and how to use AI</li>
+<li>Professional or clinical scenarios where AI use could affect other people — patients, clients, teammates</li>
+<li>Time management and study skills contexts where AI shortcuts may undermine learning</li>
+<li>Research and information tasks where the choice of tool affects the quality of the outcome</li>
+<li>Reflection activities that ask students to describe their process and the decisions they made</li>
+<li>Ethical reasoning discussions in any discipline where the consequences of decisions are explored</li>
+</ul>
+</div>
+<div class="section">
+<span class="section-title">Blackboard Ultra Quick Wins</span>
+<div class="example-note">These are examples — not requirements. Choose the ideas that fit naturally into your course, assignment, and students' level of experience.</div>
+<div class="bb-grid">
+<div class="bb-card">
+<h4>Discussion</h4>
+<div class="bb-idea">Present a scenario where a student used AI in a way that affected others and ask students to discuss whether the choice was responsible — and what they would have done differently.</div>
+<div class="bb-prompt-label">Sample Prompt</div>
+<div class="bb-prompt">"A student used AI to write feedback for a peer review assignment. The feedback sounded helpful but wasn't based on actually reading the work. Was this responsible AI use? What was the real impact — and what should the student have done?"</div>
+</div>
+<div class="bb-card">
+<h4>Journal</h4>
+<div class="bb-idea">Ask students to document an AI use decision they made recently — what they decided, why, and whether they'd make the same call again.</div>
+<div class="bb-prompt-label">Sample Prompt</div>
+<div class="bb-prompt">"Think about the last time you used AI for a school or personal task. Was it a deliberate choice or a default? Who else was affected by that decision, if anyone? Would you make the same choice again — and why?"</div>
+</div>
+<div class="bb-card">
+<h4>Video Studio</h4>
+<div class="bb-idea">Have students record a brief explanation of a responsible AI use decision they made — or one they wish they had made differently.</div>
+<div class="bb-prompt-label">Sample Prompt</div>
+<div class="bb-prompt">"Record a 60–90 second reflection on a decision you made about using or not using AI. Was it intentional? Did you think about who else it might affect? What would you do the same or differently?"</div>
+</div>
+<div class="bb-card">
+<h4>Assignment</h4>
+<div class="bb-idea">Build an AI decision log into any major assignment — a brief required section where students document whether they used AI, why they made that choice, and what they own as a result.</div>
+<div class="bb-prompt-label">Sample Prompt</div>
+<div class="bb-prompt">"Before submitting: Did you use AI on this assignment? If yes — why was it the right choice for this task? If no — why not? In either case, what do you take full responsibility for in this submission?"</div>
+</div>
+<div class="bb-card">
+<h4>AI Chat Conversation</h4>
+<div class="bb-idea">Set up a structured AI conversation where students must first decide whether AI is the right tool for the task — and document that decision before they begin.</div>
+<div class="bb-prompt-label">Sample Prompt</div>
+<div class="bb-prompt">"Before you start this AI Chat: write one sentence explaining why you think AI is or isn't the right tool for this particular task. After the conversation, revisit your reasoning — did it hold up?"</div>
+</div>
+<div class="bb-card">
+<h4>Peer Review</h4>
+<div class="bb-idea">Ask students to evaluate a peer's AI use decision — not the quality of the output, but the reasoning behind the choice to use AI in the way they did.</div>
+<div class="bb-prompt-label">Sample Prompt</div>
+<div class="bb-prompt">"Read your peer's AI decision log. Do you think their choice to use AI (or not) was appropriate for this task? What would you have decided — and why?"</div>
+</div>
+</div>
+</div>
+<div class="tips-section">
+<span class="section-title">Supporting Student Growth</span>
+<ul class="tips-list">
+<li>BE Responsible is about ownership, not restriction. The goal is not to limit AI use — it's to help students develop the habit of making deliberate, reasoned decisions about it.</li>
+<li>The "not using AI is also a valid choice" message is worth saying explicitly and repeatedly. Many students assume the responsible question is always "how do I use AI here?" — not "should I?"</li>
+<li>In professional programs, responsibility extends beyond the student to the people their work affects. Make that explicit: a healthcare student who uses AI irresponsibly isn't just risking a grade — they're practicing a habit that could harm patients.</li>
+<li>Ownership is the hardest part. Students often feel that AI use diminishes their responsibility for the outcome. Challenge that directly: you are always responsible for what you submit, regardless of how it was made.</li>
+<li>The most useful coaching question is "who else does this affect?" — it moves students from individual decision-making to professional judgment.</li>
+<li>Watch for the convenience trap: students who use AI not because it's the right tool but because the task feels hard or time is short. That pattern is worth naming and coaching, not punishing.</li>
+</ul>
+</div>
+<div class="section" style="margin-top: 28px;">
+<span class="section-title">Student Reflection Prompts</span>
+<ol class="reflection-list">
+<li>Think about your AI use over the past week. How many of those decisions were deliberate — and how many were defaults? What's the difference?</li>
+<li>Has your AI use ever affected someone else — a classmate, a group member, a patient, a client? Did you think about that before you acted?</li>
+<li>What does it mean to take ownership of something you made with AI's help? Where does your responsibility begin and end?</li>
+<li>Is there a task in your field where you would never use AI, no matter how convenient it was? What does that tell you about what responsibility means in your discipline?</li>
+<li>If someone asked you to explain your AI use philosophy in one sentence, what would you say?</li>
+</ol>
+</div>
+<div class="page-footer">
+<div class="footer-note">This guide supports the OCTC AI Literacy Framework, a student-centered translation of the Digital Education Council (DEC) AI Literacy Framework.</div>
+    OCTC AI Literacy Faculty Playbook  ·  BE Responsible  ·  Version 1.0
   </div>
-
-  <div class="behavior-bar">Developing Professional Judgment &nbsp;·&nbsp; Student AI Literacy</div>
-
-  <div class="purpose-box">
-    <div class="box-label">Purpose</div>
-    <p>Using AI is easy. Using it well requires something harder: a deliberate decision. BE Responsible is about moving from default to intentional — from "I used AI because it was there" to "I chose to use AI because it was the right tool for this task, in this context, for these reasons."</p>
-    <p>Students who practice BE Responsible don't just use AI — they decide to use it, and they own what comes out the other side. That ownership extends to the people their work affects: classmates, patients, clients, employers, and communities.</p>
-    <p class="development-note">Students develop this capability through repeated opportunities to make visible choices, reflect on their reasoning, and experience the consequences — positive and negative — of their AI use decisions.</p>
-    <p class="coaching-note">This is a coaching resource — not a grading rubric unless intentionally connected to a course learning outcome.</p>
-  </div>
-
-  <div class="section">
-    <span class="section-title">Developmental Progression</span>
-    <div class="progression-grid">
-      <div class="progression-card">
-        <h4>Introduction</h4>
-        <div class="stage-sub">FYE 100</div>
-        <p>Students use AI when it's convenient or when a task feels hard — not because they've made a deliberate choice. The decision to use AI isn't really a decision yet; it's a default. The goal is naming the choice: helping students recognize that using AI is a decision that can be made intentionally — or not made at all.</p>
-      </div>
-      <div class="progression-card">
-        <h4>Exploration</h4>
-        <div class="stage-sub">Across First-Year Courses</div>
-        <p>Students are starting to make conscious choices about when and how to use AI. They consider whether it's appropriate for the task and context, and they're aware that not using AI is a valid option. Their decision-making is developing but not yet consistent — they may still default to AI in some situations without really thinking it through.</p>
-      </div>
-      <div class="progression-card">
-        <h4>Application</h4>
-        <div class="stage-sub">Program &amp; Workplace Contexts</div>
-        <p>Every AI use decision is a deliberate one — made with awareness of the task, the context, their own tendencies, and the people affected. Students take full ownership of everything they produce, regardless of how AI was involved. They can articulate why they used AI, why they didn't, and what they would do differently.</p>
-      </div>
-    </div>
-    <div class="progression-note">Progression is developmental, not linear. Students may move fluidly between stages depending on the task, the tool, or the course context.</div>
-  </div>
-
-  <div class="section">
-    <span class="section-title">I Can Statements</span>
-    <ul class="ican-list">
-      <li><strong>I can</strong> make a deliberate decision about whether to use AI for a specific task — and explain my reasoning.</li>
-      <li><strong>I can</strong> identify who might be affected by my AI use and consider that impact before I act.</li>
-      <li><strong>I can</strong> take full ownership of my work and its outcomes, regardless of how AI was involved in creating it.</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <span class="section-title">What This Looks Like · Habits in Practice</span>
-    <ul class="obs-list">
-      <li>Makes a visible choice about whether to use AI before beginning a task — not a default</li>
-      <li>Can explain why AI was or wasn't the right tool for a specific task in a specific context</li>
-      <li>Considers who else might be affected by their AI use before acting</li>
-      <li>Takes ownership of AI-assisted work — including its errors, gaps, and consequences</li>
-      <li>Recognizes that not using AI is a legitimate and sometimes better choice</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <span class="section-title">Where This Fits Naturally</span>
-    <ul class="fit-list">
-      <li>Any assignment where students have discretion about whether and how to use AI</li>
-      <li>Professional or clinical scenarios where AI use could affect other people — patients, clients, teammates</li>
-      <li>Time management and study skills contexts where AI shortcuts may undermine learning</li>
-      <li>Research and information tasks where the choice of tool affects the quality of the outcome</li>
-      <li>Reflection activities that ask students to describe their process and the decisions they made</li>
-      <li>Ethical reasoning discussions in any discipline where the consequences of decisions are explored</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <span class="section-title">Blackboard Ultra Quick Wins</span>
-    <div class="example-note">These are examples — not requirements. Choose the ideas that fit naturally into your course, assignment, and students' level of experience.</div>
-    <div class="bb-grid">
-
-      <div class="bb-card">
-        <h4>Discussion</h4>
-        <div class="bb-idea">Present a scenario where a student used AI in a way that affected others and ask students to discuss whether the choice was responsible — and what they would have done differently.</div>
-        <div class="bb-prompt-label">Sample Prompt</div>
-        <div class="bb-prompt">"A student used AI to write feedback for a peer review assignment. The feedback sounded helpful but wasn't based on actually reading the work. Was this responsible AI use? What was the real impact — and what should the student have done?"</div>
-      </div>
-
-      <div class="bb-card">
-        <h4>Journal</h4>
-        <div class="bb-idea">Ask students to document an AI use decision they made recently — what they decided, why, and whether they'd make the same call again.</div>
-        <div class="bb-prompt-label">Sample Prompt</div>
-        <div class="bb-prompt">"Think about the last time you used AI for a school or personal task. Was it a deliberate choice or a default? Who else was affected by that decision, if anyone? Would you make the same choice again — and why?"</div>
-      </div>
-
-      <div class="bb-card">
-        <h4>Video Studio</h4>
-        <div class="bb-idea">Have students record a brief explanation of a responsible AI use decision they made — or one they wish they had made differently.</div>
-        <div class="bb-prompt-label">Sample Prompt</div>
-        <div class="bb-prompt">"Record a 60–90 second reflection on a decision you made about using or not using AI. Was it intentional? Did you think about who else it might affect? What would you do the same or differently?"</div>
-      </div>
-
-      <div class="bb-card">
-        <h4>Assignment</h4>
-        <div class="bb-idea">Build an AI decision log into any major assignment — a brief required section where students document whether they used AI, why they made that choice, and what they own as a result.</div>
-        <div class="bb-prompt-label">Sample Prompt</div>
-        <div class="bb-prompt">"Before submitting: Did you use AI on this assignment? If yes — why was it the right choice for this task? If no — why not? In either case, what do you take full responsibility for in this submission?"</div>
-      </div>
-
-      <div class="bb-card">
-        <h4>AI Chat Conversation</h4>
-        <div class="bb-idea">Set up a structured AI conversation where students must first decide whether AI is the right tool for the task — and document that decision before they begin.</div>
-        <div class="bb-prompt-label">Sample Prompt</div>
-        <div class="bb-prompt">"Before you start this AI Chat: write one sentence explaining why you think AI is or isn't the right tool for this particular task. After the conversation, revisit your reasoning — did it hold up?"</div>
-      </div>
-
-      <div class="bb-card">
-        <h4>Peer Review</h4>
-        <div class="bb-idea">Ask students to evaluate a peer's AI use decision — not the quality of the output, but the reasoning behind the choice to use AI in the way they did.</div>
-        <div class="bb-prompt-label">Sample Prompt</div>
-        <div class="bb-prompt">"Read your peer's AI decision log. Do you think their choice to use AI (or not) was appropriate for this task? What would you have decided — and why?"</div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="tips-section">
-    <span class="section-title">Supporting Student Growth</span>
-    <ul class="tips-list">
-      <li>BE Responsible is about ownership, not restriction. The goal is not to limit AI use — it's to help students develop the habit of making deliberate, reasoned decisions about it.</li>
-      <li>The "not using AI is also a valid choice" message is worth saying explicitly and repeatedly. Many students assume the responsible question is always "how do I use AI here?" — not "should I?"</li>
-      <li>In professional programs, responsibility extends beyond the student to the people their work affects. Make that explicit: a healthcare student who uses AI irresponsibly isn't just risking a grade — they're practicing a habit that could harm patients.</li>
-      <li>Ownership is the hardest part. Students often feel that AI use diminishes their responsibility for the outcome. Challenge that directly: you are always responsible for what you submit, regardless of how it was made.</li>
-      <li>The most useful coaching question is "who else does this affect?" — it moves students from individual decision-making to professional judgment.</li>
-      <li>Watch for the convenience trap: students who use AI not because it's the right tool but because the task feels hard or time is short. That pattern is worth naming and coaching, not punishing.</li>
-    </ul>
-  </div>
-
-  <div class="section" style="margin-top: 28px;">
-    <span class="section-title">Student Reflection Prompts</span>
-    <ol class="reflection-list">
-      <li>Think about your AI use over the past week. How many of those decisions were deliberate — and how many were defaults? What's the difference?</li>
-      <li>Has your AI use ever affected someone else — a classmate, a group member, a patient, a client? Did you think about that before you acted?</li>
-      <li>What does it mean to take ownership of something you made with AI's help? Where does your responsibility begin and end?</li>
-      <li>Is there a task in your field where you would never use AI, no matter how convenient it was? What does that tell you about what responsibility means in your discipline?</li>
-      <li>If someone asked you to explain your AI use philosophy in one sentence, what would you say?</li>
-    </ol>
-  </div>
-
-  <div class="page-footer">
-    <div class="footer-note">This guide supports the OCTC AI Literacy Framework, a student-centered translation of the Digital Education Council (DEC) AI Literacy Framework.</div>
-    OCTC AI Literacy Faculty Playbook &nbsp;·&nbsp; BE Responsible &nbsp;·&nbsp; Version 1.0
-  </div>
-
-</body>
+</main></body>
 </html>
