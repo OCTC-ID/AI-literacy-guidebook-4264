@@ -72,8 +72,8 @@ img { max-width: 100%; }
 .book-mark { color: var(--octc-gold); font-size: 4.5rem; line-height:1; transform: rotate(90deg); display:inline-block; font-weight:300; }
 .hero h1 { margin:0; color: var(--octc-blue-dark); font-size: clamp(3rem, 5.5vw, 5rem); line-height:1.02; letter-spacing:-.035em; }
 .hero-title-rule {
-    width: 475px;
-    height: 8px;
+    width: 500px;
+    height: 6px;
     margin: 20px 0 18px;
     background: var(--octc-gold);
     border-radius: 8px;
