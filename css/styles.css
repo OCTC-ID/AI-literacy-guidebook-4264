@@ -39,7 +39,15 @@ img { max-width: 100%; }
 /* Homepage hero */
 .hero { background: #fff; border-bottom: 3px solid var(--octc-gold); }
 .hero-inner { max-width: var(--content); min-height: 560px; margin: 0 auto; padding: 58px 24px 48px; display:grid; grid-template-columns: 1.02fr .98fr; gap: 40px; align-items:center; }
-.title-lockup { display:flex; align-items:center; gap:18px; }
+.title-lockup { display:flex; align-items:center; gap:22px; }
+.title-accent {
+  display: block;
+  width: 10px;
+  height: 7rem;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: var(--octc-gold);
+}
 .book-mark { color: var(--octc-gold); font-size: 4.5rem; line-height:1; transform: rotate(90deg); display:inline-block; font-weight:300; }
 .hero h1 { margin:0; color: var(--octc-blue-dark); font-size: clamp(3rem, 5.5vw, 5rem); line-height:1.02; letter-spacing:-.035em; }
 .hero-subtitle { margin:18px 0 0; max-width:580px; color:var(--octc-blue-dark); font-size:clamp(1.5rem,2.8vw,2.2rem); line-height:1.28; font-style:italic; }
