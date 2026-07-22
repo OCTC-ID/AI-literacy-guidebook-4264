@@ -79,3 +79,6 @@ footer{
     color:#777;
     font-size:.9rem;
 }
+main li {
+    margin-bottom: 16px;
+}
