@@ -1,66 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OCTC AI Literacy Faculty Playbook – BE Critical</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-<title>BE Critical</title>
+  body {
+    background: #ffffff;
+    font-family: Arial, Helvetica, "Segoe UI", sans-serif;
+    color: #111111;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 28px 24px;
+  }
 
-<link rel="stylesheet" href="../css/styles.css">
+  .print-btn { display: block; margin-bottom: 20px; text-align: right; }
+  .print-btn button {
+    font-family: Arial, Helvetica, "Segoe UI", sans-serif;
+    font-size: 11px; font-weight: 600;
+    background: #f0f0f0; color: #555555;
+    border: 1px solid #cccccc; padding: 5px 14px;
+    cursor: pointer; letter-spacing: 0.04em;
+    text-transform: uppercase; border-radius: 3px;
+  }
+  .print-btn button:hover { background: #e0e0e0; }
 
+  .playbook-header { background: #4B2E83; padding: 28px 32px; margin-bottom: 4px; }
+  .playbook-label { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #D4BBFF; margin-bottom: 4px; }
+  .playbook-tagline { font-size: 12px; font-weight: 600; color: #D4BBFF; letter-spacing: 0.06em; margin-bottom: 16px; font-style: italic; }
+  .be-title { font-size: 36px; font-weight: 800; color: #ffffff; line-height: 1.1; margin-bottom: 6px; }
+  .be-subtitle { font-size: 15px; font-weight: 600; color: #F2D024; letter-spacing: 0.04em; margin-bottom: 14px; }
+  .ican-headline { font-size: 13px; font-weight: 400; color: #E9D5FF; line-height: 1.6; font-style: italic; }
+  .ican-headline strong { font-weight: 700; color: #ffffff; font-style: normal; }
+
+  .behavior-bar { background: #F2D024; color: #111111; padding: 10px 32px; font-size: 13px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 24px; }
+
+  .purpose-box { background: #F3F0FF; border-left: 5px solid #4B2E83; padding: 18px 22px; margin-bottom: 28px; }
+  .purpose-box .box-label { font-size: 11px; font-weight: 800; color: #4B2E83; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 8px; }
+  .purpose-box p { font-size: 14px; line-height: 1.7; color: #111111; margin-bottom: 8px; }
+  .purpose-box p:last-child { margin-bottom: 0; }
+  .purpose-box .development-note { font-size: 13px; font-weight: 700; color: #4B2E83; }
+  .purpose-box .coaching-note { font-size: 13px; font-weight: 700; color: #4B2E83; font-style: italic; }
+
+  .section { margin-bottom: 28px; }
+  .section-title { font-size: 15px; font-weight: 800; color: #4B2E83; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 14px; padding-bottom: 7px; border-bottom: 3px solid #F2D024; display: block; }
+
+  .progression-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-bottom: 10px; }
+  .progression-card { background: #F3F0FF; padding: 16px; border-top: 4px solid #4B2E83; }
+  .progression-card h4 { font-size: 13px; font-weight: 800; color: #4B2E83; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+  .progression-card .stage-sub { font-size: 11px; font-weight: 700; color: #4B2E83; margin-bottom: 10px; font-style: italic; }
+  .progression-card p { font-size: 13px; line-height: 1.65; color: #111111; font-weight: 400; }
+  .progression-note { font-size: 12px; color: #111111; font-style: italic; margin-top: 8px; line-height: 1.6; font-weight: 600; }
+
+  .ican-list, .obs-list, .fit-list, .tips-list { list-style: none; padding: 0; }
+
+  .ican-list li { font-size: 15px; line-height: 1.65; color: #111111; padding: 8px 0 8px 28px; margin-bottom: 8px; position: relative; font-weight: 400; }
+  .ican-list li::before { content: "▶"; color: #F2D024; font-size: 13px; font-weight: 800; position: absolute; left: 2px; top: 10px; }
+  .ican-list li strong { color: #4B2E83; font-weight: 800; margin-right: 3px; }
+
+  .obs-list li, .fit-list li { font-size: 15px; line-height: 1.65; color: #111111; padding: 8px 0 8px 28px; margin-bottom: 4px; border-bottom: 1px solid #D4BBFF; position: relative; font-weight: 400; }
+  .obs-list li:last-child, .fit-list li:last-child { border-bottom: none; }
+  .obs-list li::before { content: "✓"; color: #4B2E83; font-weight: 800; font-size: 15px; position: absolute; left: 4px; top: 9px; }
+  .fit-list li::before { content: "→"; color: #4B2E83; font-weight: 800; font-size: 15px; position: absolute; left: 4px; top: 9px; }
+
+  .example-note { background: #FBFAFE; border-left: 4px solid #D4BBFF; padding: 12px 14px; margin-bottom: 14px; font-size: 13px; line-height: 1.6; color: #3D3550; font-style: italic; }
+
+  .bb-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 4px; }
+  .bb-card { background: #F3F0FF; padding: 16px; border-top: 4px solid #6B21A8; }
+  .bb-card h4 { font-size: 13px; font-weight: 800; color: #4B2E83; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+  .bb-card .bb-idea { font-size: 13px; line-height: 1.6; color: #111111; margin-bottom: 10px; font-weight: 400; }
+  .bb-card .bb-prompt-label { font-size: 10px; font-weight: 800; color: #4B2E83; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 5px; }
+  .bb-card .bb-prompt { font-size: 12px; line-height: 1.6; color: #111111; background: #ffffff; border-left: 3px solid #F2D024; padding: 8px 10px; font-style: italic; font-weight: 600; }
+
+  .tips-section { background: #4B2E83; padding: 24px 28px; margin-top: 4px; }
+  .tips-section .section-title { color: #F2D024; border-bottom-color: rgba(242,208,36,0.4); }
+  .tips-list li { font-size: 15px; line-height: 1.65; color: #ffffff; padding: 8px 0 8px 20px; border-bottom: 1px solid rgba(255,255,255,0.15); position: relative; font-weight: 400; }
+  .tips-list li:last-child { border-bottom: none; }
+  .tips-list li::before { content: "→"; color: #F2D024; font-weight: 700; position: absolute; left: 0; top: 8px; }
+
+  .reflection-list { list-style: none; padding: 0; counter-reset: reflect-counter; }
+  .reflection-list li { font-size: 15px; line-height: 1.65; color: #111111; padding: 10px 0 10px 36px; border-bottom: 1px solid #D4BBFF; position: relative; font-weight: 400; counter-increment: reflect-counter; }
+  .reflection-list li:last-child { border-bottom: none; }
+  .reflection-list li::before { content: counter(reflect-counter); background: #4B2E83; color: #ffffff; font-size: 11px; font-weight: 800; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; position: absolute; left: 0; top: 11px; }
+
+  .page-footer { margin-top: 24px; padding-top: 12px; border-top: 2px solid #D4BBFF; font-size: 11px; color: #111111; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+  .footer-note { font-size: 11px; color: #111111; font-weight: 400; font-style: italic; margin-bottom: 6px; line-height: 1.5; text-transform: none; letter-spacing: 0; }
+
+  @media print {
+    @page { size: 8.5in 11in; margin: 0.55in 0.6in; }
+    body { max-width: 100%; padding: 0; font-size: 13px; }
+    .print-btn { display: none; }
+    .playbook-header, .behavior-bar, .purpose-box, .progression-card, .bb-card, .tips-section, .example-note { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .progression-grid { grid-template-columns: 1fr 1fr 1fr; }
+    .bb-grid { grid-template-columns: 1fr 1fr; }
+    .section-title { font-size: 13px; }
+    .be-title { font-size: 30px; }
+    .section, .progression-card, .bb-card, .tips-section { break-inside: avoid; }
+  }
+</style>
 </head>
-
 <body>
 
-  <div style="margin-bottom: 18px;">
-    <a href="../index.html" style="color: #4B2E83; font-weight: 700; text-decoration: none;">
-      ← Back to AI Literacy Playbook
-    </a>
+  <div class="print-btn"><button onclick="window.print()">Print / Save as PDF</button></div>
+
+  <div class="playbook-header">
+    <div class="playbook-label">OCTC AI Literacy Faculty Playbook</div>
+    <div class="playbook-tagline">Teaching AI Judgment, One Habit at a Time.</div>
+    <div class="be-title">BE Critical</div>
+    <div class="be-subtitle">Stop. Think. Then decide.</div>
+    <div class="ican-headline"><strong>I Can:</strong> I can pause before using AI-generated content, evaluate it for accuracy, bias, and credibility, and explain my reasoning.</div>
   </div>
 
-   <div class="print-btn">
-    <button onclick="window.print()">Print / Save as PDF</button>
+  <div class="behavior-bar">Developing Professional Judgment &nbsp;·&nbsp; Student AI Literacy</div>
+
+  <div class="purpose-box">
+    <div class="box-label">Purpose</div>
+    <p>AI generates output quickly and confidently — but speed and confidence are not the same as accuracy or reliability. BE Critical is the habit of inserting a deliberate pause between receiving AI output and acting on it.</p>
+    <p>Students who practice BE Critical don't just accept what AI produces; they interrogate it. They ask whether it's accurate, whether it reflects bias, whether it actually answers what was asked — and they can explain their thinking. In an information environment full of plausible-sounding errors, this habit is essential in every discipline.</p>
+    <p class="development-note">Students develop this capability through repeated low-stakes practice — evaluating AI output in contexts where the consequences of getting it wrong are manageable, before they face high-stakes decisions.</p>
+    <p class="coaching-note">This is a coaching resource — not a grading rubric unless intentionally connected to a course learning outcome.</p>
   </div>
-<header>
 
-<h1>AI Literacy Playbook</h1>
+  <div class="section">
+    <span class="section-title">Developmental Progression</span>
+    <div class="progression-grid">
+      <div class="progression-card">
+        <h4>Introduction</h4>
+        <div class="stage-sub">FYE 100</div>
+        <p>Students receive AI output and tend to use it. The pause between getting output and acting on it hasn't developed yet — AI responses feel like answers rather than starting points. The goal is introducing the habit of stopping: naming the expectation that AI output requires evaluation before use.</p>
+      </div>
+      <div class="progression-card">
+        <h4>Exploration</h4>
+        <div class="stage-sub">Across First-Year Courses</div>
+        <p>Students are developing the habit of pausing before they use AI output. They check some things, question some responses, and can often tell when something doesn't quite fit — even if their evaluation isn't yet consistent or systematic. They're starting to recognize that AI output is a draft, not a verdict.</p>
+      </div>
+      <div class="progression-card">
+        <h4>Application</h4>
+        <div class="stage-sub">Program &amp; Workplace Contexts</div>
+        <p>Students stop before using anything AI generates. They check it, question it, and ask whether it actually answers what they needed. They can stand behind what they use — and if they can't, they don't use it. Their critical evaluation is consistent, systematic, and transferable to new tools and contexts.</p>
+      </div>
+    </div>
+    <div class="progression-note">Progression is developmental, not linear. Students may move fluidly between stages depending on the task, the tool, or the course context.</div>
+  </div>
 
-<p>BE Critical</p>
+  <div class="section">
+    <span class="section-title">I Can Statements</span>
+    <ul class="ican-list">
+      <li><strong>I can</strong> pause before using AI-generated content and ask whether it is accurate, biased, or incomplete.</li>
+      <li><strong>I can</strong> evaluate AI output for credibility — checking claims, noticing gaps, and identifying where the output might mislead.</li>
+      <li><strong>I can</strong> explain my reasoning for using, modifying, or rejecting AI output.</li>
+    </ul>
+  </div>
 
-</header>
+  <div class="section">
+    <span class="section-title">What This Looks Like · Habits in Practice</span>
+    <ul class="obs-list">
+      <li>Pauses before submitting or acting on AI output — treating it as a starting point, not a final answer</li>
+      <li>Can identify at least one specific concern about a piece of AI output — not just a general sense that "AI can be wrong"</li>
+      <li>Checks AI-generated claims against other sources before relying on them</li>
+      <li>Modifies or rejects AI output when it doesn't meet the standard needed — and can explain why</li>
+      <li>Asks "does this actually answer my question?" rather than accepting the first response</li>
+    </ul>
+  </div>
 
-<main>
+  <div class="section">
+    <span class="section-title">Where This Fits Naturally</span>
+    <ul class="fit-list">
+      <li>Research assignments where students use AI to gather, summarize, or interpret information</li>
+      <li>Writing tasks where AI is used for drafting, outlining, or editing</li>
+      <li>Technical or clinical problem-solving where AI output could influence a real decision</li>
+      <li>Information literacy activities using the SIFT method or similar evaluation frameworks</li>
+      <li>Any assignment where students are asked to evaluate, analyze, or synthesize information from multiple sources</li>
+      <li>Career research and decision-making activities where students assess the quality and fit of AI-generated information</li>
+    </ul>
+  </div>
 
-<a href="../index.html">← Return to Playbook</a>
+  <div class="section">
+    <span class="section-title">Blackboard Ultra Quick Wins</span>
+    <div class="example-note">These are examples — not requirements. Choose the ideas that fit naturally into your course, assignment, and students' level of experience.</div>
+    <div class="bb-grid">
 
-<div class="card">
+      <div class="bb-card">
+        <h4>Discussion</h4>
+        <div class="bb-idea">Post an AI-generated response with a deliberate error or bias and ask students to find it — then discuss how they would have caught it without being told it was there.</div>
+        <div class="bb-prompt-label">Sample Prompt</div>
+        <div class="bb-prompt">"Here's an AI response to a question relevant to our course. Something in it is inaccurate or misleading. Find it, explain why it's a problem, and describe how you would have caught it on your own."</div>
+      </div>
 
-<h2>BE Critical</h2>
+      <div class="bb-card">
+        <h4>Journal</h4>
+        <div class="bb-idea">Ask students to use AI to answer a course-relevant question, then document their evaluation process — what they checked, what they trusted, and what they changed or rejected.</div>
+        <div class="bb-prompt-label">Sample Prompt</div>
+        <div class="bb-prompt">"Ask an AI tool a question related to our course topic. What did it get right? What did you question? What did you verify — and how? What would you not use, and why?"</div>
+      </div>
 
-<p>
+      <div class="bb-card">
+        <h4>Video Studio</h4>
+        <div class="bb-idea">Have students record a think-aloud evaluation of an AI response — narrating their reasoning as they work through whether to trust, modify, or reject the output.</div>
+        <div class="bb-prompt-label">Sample Prompt</div>
+        <div class="bb-prompt">"Record yourself evaluating an AI response to a course-relevant question. Talk through your thinking: what you're checking, what concerns you, and what you would do with this output."</div>
+      </div>
 
-This page will eventually contain the complete BE Critical guide.
+      <div class="bb-card">
+        <h4>Assignment</h4>
+        <div class="bb-idea">Give students an AI-generated draft or summary relevant to your course and ask them to annotate it — marking what's accurate, what's questionable, and what needs verification or correction.</div>
+        <div class="bb-prompt-label">Sample Prompt</div>
+        <div class="bb-prompt">"Here is an AI-generated summary of [course topic]. Annotate it: highlight what you'd keep, flag what needs verification, and mark anything you'd remove or correct. Explain your reasoning for each."</div>
+      </div>
 
-</p>
+      <div class="bb-card">
+        <h4>AI Chat Conversation</h4>
+        <div class="bb-idea">Have students use AI to answer a question, then deliberately push back — asking follow-up questions, challenging claims, and documenting where the AI held firm, revised, or revealed its limits.</div>
+        <div class="bb-prompt-label">Sample Prompt</div>
+        <div class="bb-prompt">"Ask an AI a question relevant to our course. Then challenge at least two of its claims with follow-up questions. Document how it responded — and what that tells you about how much to trust it."</div>
+      </div>
 
-<p>
+      <div class="bb-card">
+        <h4>Knowledge Check</h4>
+        <div class="bb-idea">Present students with two AI responses to the same question — one accurate, one subtly flawed — and ask them to identify which is which and explain their reasoning.</div>
+        <div class="bb-prompt-label">Sample Prompt</div>
+        <div class="bb-prompt">"Here are two AI responses to the same question. One is accurate; one contains a significant error. Which is which? How did you decide? What would you have needed to catch this in the real world?"</div>
+      </div>
 
-For now, we're just building the framework.
+    </div>
+  </div>
 
-</p>
+  <div class="tips-section">
+    <span class="section-title">Supporting Student Growth</span>
+    <ul class="tips-list">
+      <li>The hardest part of BE Critical is breaking the reflex to accept. Students who have always been rewarded for finding answers quickly need explicit permission to slow down — and explicit coaching on what slowing down actually looks like.</li>
+      <li>Teach evaluation as a skill, not a suspicion. The goal is not to make students distrust AI — it's to help them develop the judgment to know when to trust it and when not to.</li>
+      <li>In technical and health sciences courses, the stakes of acting on bad information are high and concrete — use those stakes to make the habit feel necessary, not academic.</li>
+      <li>The most powerful evaluation question is "how would I check this?" — not "is this right?" Build that question into your feedback and discussion habits.</li>
+      <li>Students often don't know what to look for. Give them field-specific evaluation criteria — not generic "check your sources" advice, but standards for what accuracy and credibility look like in your discipline.</li>
+      <li>Low-stakes practice is essential. Students need many opportunities to evaluate AI output in manageable contexts before they face high-stakes decisions.</li>
+    </ul>
+  </div>
 
-</div>
+  <div class="section" style="margin-top: 28px;">
+    <span class="section-title">Student Reflection Prompts</span>
+    <ol class="reflection-list">
+      <li>Describe a time you used AI output without questioning it. Looking back, should you have paused? What would you have checked?</li>
+      <li>What does it feel like to evaluate AI output critically — versus just accepting it? What gets in the way of the pause?</li>
+      <li>What are the specific things you look for when you evaluate AI output in your field? How did you learn to look for those things?</li>
+      <li>Has AI ever given you something that sounded right but turned out to be wrong or misleading? What did you learn from that?</li>
+      <li>If you couldn't use AI for a task, what would you do instead? What does that tell you about what AI is actually contributing?</li>
+    </ol>
+  </div>
 
-</main>
-
-<footer>
-
-AI Literacy Playbook
-
-</footer>
+  <div class="page-footer">
+    <div class="footer-note">This guide supports the OCTC AI Literacy Framework, a student-centered translation of the Digital Education Council (DEC) AI Literacy Framework.</div>
+    OCTC AI Literacy Faculty Playbook &nbsp;·&nbsp; BE Critical &nbsp;·&nbsp; Version 1.0
+  </div>
 
 </body>
-
 </html>
