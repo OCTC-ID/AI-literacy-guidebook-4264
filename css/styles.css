@@ -74,7 +74,7 @@ img { max-width: 100%; }
 .hero-title-rule {
     width: 430px;
     height: 8px;
-    margin: 20px 0 28px;
+    margin: 20px 0 18px;
     background: var(--octc-gold);
     border-radius: 8px;
 }
