@@ -69,7 +69,7 @@ img { max-width: 100%; }
 
 .hero-art img{
     width:100%;
-    max-width:520px;
+    max-width:600px;
     display:block;
     filter:drop-shadow(0 14px 12px rgba(0,52,95,.11));
 }
