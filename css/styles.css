@@ -309,11 +309,10 @@ img { max-width: 100%; }
    ========================== */
 
 .page-navigation {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
-  margin: 0 12px 12px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
 }
 
 .page-nav {
