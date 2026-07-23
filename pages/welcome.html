@@ -1,572 +1,340 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
 <title>OCTC AI Literacy Faculty Playbook – Welcome to the BE Framework</title>
 
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    background: #ffffff;
-    font-family: Arial, Helvetica, "Segoe UI", sans-serif;
-    color: #111111;
-    max-width: 820px;
-    margin: 0 auto;
-    padding: 28px 24px;
-  }
-
-  /* PRINT BUTTON */
-
-  .print-btn {
-    display: block;
-    margin-bottom: 20px;
-    text-align: right;
-  }
-
-  .print-btn button {
-    font-family: Arial, Helvetica, "Segoe UI", sans-serif;
-    font-size: 11px;
-    font-weight: 600;
-    background: #f0f0f0;
-    color: #555555;
-    border: 1px solid #cccccc;
-    padding: 5px 14px;
-    cursor: pointer;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    border-radius: 3px;
-  }
-
-  .print-btn button:hover {
-    background: #e0e0e0;
-  }
-
-  /* PAGE HEADER */
-
-  .playbook-header {
-    background: #4B2E83;
-    padding: 32px;
-    margin-bottom: 4px;
-  }
-
-  .playbook-label {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: #D4BBFF;
-    margin-bottom: 4px;
-  }
-
-  .playbook-tagline {
-    font-size: 12px;
-    font-weight: 600;
-    color: #D4BBFF;
-    letter-spacing: 0.06em;
-    margin-bottom: 20px;
-    font-style: italic;
-  }
-
-  .page-title {
-    font-size: 30px;
-    font-weight: 800;
-    color: #ffffff;
-    line-height: 1.2;
-    margin-bottom: 10px;
-  }
-
-  .page-subtitle {
-    font-size: 14px;
-    font-weight: 400;
-    color: #E9D5FF;
-    line-height: 1.6;
-  }
-
-  .page-bar {
-    background: #F2D024;
-    color: #111111;
-    padding: 10px 32px;
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 28px;
-  }
-
-  /* GENERAL SECTIONS */
-
-  .section {
-    margin-bottom: 32px;
-  }
-
-  .section-title {
-    display: block;
-    font-size: 15px;
-    font-weight: 800;
-    color: #4B2E83;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 14px;
-    padding-bottom: 7px;
-    border-bottom: 3px solid #F2D024;
-  }
-
-  .intro-text {
-    font-size: 15px;
-    line-height: 1.75;
-    color: #111111;
-    margin-bottom: 12px;
-  }
-
-  .intro-text:last-child {
-    margin-bottom: 0;
-  }
-
-  /* BE BEHAVIORS TABLE */
-
-  .be-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 4px;
-  }
-
-  .be-table thead tr {
-    background: #4B2E83;
-  }
-
-  .be-table thead th {
-    padding: 10px 14px;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #F2D024;
-    text-align: left;
-  }
-
-  .be-table tbody tr {
-    border-bottom: 1px solid #E9D5FF;
-  }
-
-  .be-table tbody tr:last-child {
-    border-bottom: none;
-  }
-
-  .be-table tbody tr:nth-child(even) {
-    background: #F3F0FF;
-  }
-
-  .be-table tbody td {
-    padding: 12px 14px;
-    font-size: 13px;
-    line-height: 1.6;
-    color: #111111;
-    vertical-align: top;
-  }
-
-  .be-table tbody td.be-name {
-    font-weight: 800;
-    color: #4B2E83;
-    white-space: nowrap;
-  }
-
-  .be-table tbody td.guiding-question {
-    font-weight: 600;
-  }
-
-  /* LEARNING ARC */
-
-  .arc-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-    margin-top: 4px;
-  }
-
-  .arc-card {
-    background: #F3F0FF;
-    padding: 16px;
-    border-top: 4px solid #4B2E83;
-  }
-
-  .arc-card h4 {
-    font-size: 13px;
-    font-weight: 800;
-    color: #4B2E83;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 8px;
-  }
-
-  .arc-card p {
-    font-size: 13px;
-    line-height: 1.65;
-    color: #111111;
-  }
-
-  .arc-note {
-    font-size: 12px;
-    color: #111111;
-    font-style: italic;
-    margin-top: 10px;
-    line-height: 1.6;
-    font-weight: 600;
-  }
-
-  /* FACULTY CALLOUT */
-
-  .callout-box {
-    background: #F3F0FF;
-    border-left: 5px solid #4B2E83;
-    padding: 18px 22px;
-    margin-top: 4px;
-  }
-
-  .callout-box p {
-    font-size: 14px;
-    line-height: 1.7;
-    color: #111111;
-    margin-bottom: 10px;
-  }
-
-  .callout-box p:last-child {
-    margin-bottom: 0;
-  }
-
-  /* FRAMEWORK FOUNDATION */
-
-  .framework-note {
-    background: #4B2E83;
-    padding: 22px 26px;
-    margin-top: 4px;
-  }
-
-  .framework-note .box-label {
-    font-size: 11px;
-    font-weight: 800;
-    color: #F2D024;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    margin-bottom: 8px;
-  }
-
-  .framework-note p {
-    font-size: 14px;
-    line-height: 1.7;
-    color: #ffffff;
-  }
-
-  .framework-note a {
-    color: #F2D024;
-    font-weight: 700;
-  }
-
-  /* FOOTER */
-
-  .page-footer {
-    margin-top: 28px;
-    padding-top: 12px;
-    border-top: 2px solid #D4BBFF;
-    font-size: 11px;
-    color: #111111;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .footer-note {
-    font-size: 11px;
-    color: #111111;
-    font-weight: 400;
-    font-style: italic;
-    margin-bottom: 6px;
-    line-height: 1.5;
-    text-transform: none;
-    letter-spacing: 0;
-  }
-
-  /* RESPONSIVE */
-
-  @media (max-width: 700px) {
-    body {
-      padding: 18px 16px;
-    }
-
-    .playbook-header,
-    .page-bar {
-      padding-left: 22px;
-      padding-right: 22px;
-    }
-
-    .page-title {
-      font-size: 26px;
-    }
-
-    .arc-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .be-table {
-      display: block;
-      overflow-x: auto;
-    }
-  }
-
-  /* PRINT */
-
-  @media print {
-    @page {
-      size: 8.5in 11in;
-      margin: 0.55in 0.6in;
-    }
-
-    body {
-      max-width: 100%;
-      padding: 0;
-      font-size: 13px;
-    }
-
-    .print-btn {
-      display: none;
-    }
-
-    .playbook-header,
-    .page-bar,
-    .arc-card,
-    .be-table thead tr,
-    .framework-note {
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
-    }
-
-    .arc-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .section {
-      break-inside: avoid;
-    }
-  }
-</style>
+<link href="../css/styles.css" rel="stylesheet"/>
 </head>
 
-<body>
+<body class="guide-page">
 
-  <div class="print-btn">
-    <button onclick="window.print()">Print / Save as PDF</button>
+<header class="site-header">
+  <div class="nav-shell">
+
+    <a aria-label="AI Literacy Playbook home"
+       class="logo-link"
+       href="../index.html">
+      <img
+        alt="Owensboro Community and Technical College"
+        src="../images/Owensboro_horiz_RGBrev.png"/>
+    </a>
+
+    <nav aria-label="Playbook navigation" class="site-links">
+      <a href="../index.html">HOME</a>
+      <a href="be-safe.html">BE Safe</a>
+      <a href="be-honest.html">BE Honest</a>
+      <a href="be-critical.html">BE Critical</a>
+      <a href="be-responsible.html">BE Responsible</a>
+      <a href="be-reflective.html">BE Reflective</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main class="playbook-page">
+
+  <div class="playbook-header">
+
+    <div class="playbook-label">
+      OCTC AI Literacy Faculty Playbook
+    </div>
+
+    <div class="playbook-tagline">
+      Teaching AI Judgment, One Habit at a Time.
+    </div>
+
+    <div class="be-title">
+      Welcome to the BE Framework
+    </div>
+
+    <div class="be-subtitle">
+      A practical, student-centered approach to developing AI judgment.
+    </div>
+
+    <div class="ican-headline">
+      AI literacy is not simply about learning to use new tools. It is about
+      developing the judgment to decide when AI should be used, when it should
+      not, and how to use it in ways that support learning, integrity, and
+      professional growth.
+    </div>
+
   </div>
 
-  <header class="playbook-header">
-    <div class="playbook-label">OCTC AI Literacy Faculty Playbook</div>
-    <div class="playbook-tagline">Teaching AI Judgment, One Habit at a Time.</div>
 
-    <h1 class="page-title">Welcome to the BE Framework</h1>
+  <div class="behavior-bar">
+    Framework Introduction &nbsp;·&nbsp; Faculty Guide
+  </div>
 
-    <p class="page-subtitle">
-      A practical, student-centered approach to developing AI judgment across
-      courses, programs, and professional contexts.
+
+  <div class="purpose-box">
+
+    <div class="box-label">Why the BE Framework?</div>
+
+    <p>
+      Artificial intelligence is changing how students learn, solve problems,
+      and prepare for their future careers. New tools appear rapidly, bringing
+      both opportunities and new questions. As faculty, we do not need to have
+      every answer about AI—but we do have an important role in helping
+      students develop the judgment they will need to use these tools
+      thoughtfully and responsibly.
     </p>
-  </header>
 
-  <div class="page-bar">
-    Introduction &nbsp;·&nbsp; AI Literacy Framework
+    <p>
+      The BE Framework was created with that goal in mind.
+    </p>
+
+    <p>
+      Rather than focusing on specific AI tools or rapidly changing
+      technologies, the framework focuses on five human behaviors that students
+      can develop over time. These behaviors help students make informed
+      decisions, act with integrity, think critically, take responsibility for
+      their choices, and reflect on how AI influences their learning.
+    </p>
+
+    <p class="development-note">
+      These habits will remain valuable long after today’s AI tools have
+      changed.
+    </p>
+
+    <p class="coaching-note">
+      This playbook is a faculty coaching resource—not a policy document,
+      mandate, or grading system.
+    </p>
+
   </div>
 
-  <main>
 
-    <section class="section">
-      <span class="section-title">Why the BE Framework?</span>
+  <div class="section">
 
-      <p class="intro-text">
-        Artificial intelligence is changing how students learn, solve problems,
-        and prepare for their future careers. New tools appear almost daily,
-        bringing both opportunities and new questions. As faculty, we do not
-        need to have every answer about AI—but we do have an important role in
-        helping students develop the judgment they will need to use these tools
-        thoughtfully and responsibly.
-      </p>
+    <span class="section-title">The Five BE Behaviors</span>
 
-      <p class="intro-text">
-        The BE Framework was created with that goal in mind.
-      </p>
+    <p>
+      The BE Framework places the student—not the tool—at the center. Each
+      behavior gives students a practical question they can use to guide their
+      decisions about AI.
+    </p>
 
-      <p class="intro-text">
-        Rather than focusing on specific AI tools or rapidly changing
-        technologies, the framework focuses on five human behaviors that
-        students can develop over time. These behaviors help students make
-        informed decisions, act with integrity, think critically, and reflect
-        on how AI influences their learning. Those habits will remain valuable
-        long after today’s AI tools have evolved.
-      </p>
+    <ul class="ican-list">
 
-      <p class="intro-text">
-        This playbook is designed to help faculty recognize where those
-        behaviors already exist within their courses and provide practical
-        ideas for strengthening them. You do not need to redesign your course
-        or become an AI expert. In many cases, you are already teaching these
-        habits—you simply have not been calling them AI literacy.
-      </p>
-    </section>
+      <li>
+        <strong>BE Safe:</strong>
+        Do I understand this tool well enough to make smart decisions about
+        how I use it and what I share?
+      </li>
 
-    <section class="section">
-      <span class="section-title">The Five BE Behaviors</span>
+      <li>
+        <strong>BE Honest:</strong>
+        Am I accurately representing my own work and my use of AI?
+      </li>
 
-      <table class="be-table">
-        <thead>
-          <tr>
-            <th style="width: 22%;">Behavior</th>
-            <th>Guiding Question</th>
-          </tr>
-        </thead>
+      <li>
+        <strong>BE Critical:</strong>
+        Have I evaluated this information before trusting or using it?
+      </li>
 
-        <tbody>
-          <tr>
-            <td class="be-name">BE Safe</td>
-            <td class="guiding-question">
-              Do I understand this tool well enough to use it wisely?
-            </td>
-          </tr>
+      <li>
+        <strong>BE Responsible:</strong>
+        Am I making an intentional choice and taking ownership of the outcome?
+      </li>
 
-          <tr>
-            <td class="be-name">BE Honest</td>
-            <td class="guiding-question">
-              Am I accurately representing my own work and AI use?
-            </td>
-          </tr>
+      <li>
+        <strong>BE Reflective:</strong>
+        How is AI affecting my thinking, learning, and professional growth?
+      </li>
 
-          <tr>
-            <td class="be-name">BE Critical</td>
-            <td class="guiding-question">
-              Have I evaluated this information before trusting or using it?
-            </td>
-          </tr>
+    </ul>
 
-          <tr>
-            <td class="be-name">BE Responsible</td>
-            <td class="guiding-question">
-              Am I making intentional choices and taking ownership of the
-              outcomes?
-            </td>
-          </tr>
+    <p style="margin-top: 16px;">
+      Together, these behaviors provide a common language for discussing AI
+      literacy across disciplines. Whether students are writing essays,
+      troubleshooting engines, caring for patients, analyzing data, or
+      developing business plans, the underlying habits of thoughtful AI use
+      remain remarkably consistent.
+    </p>
 
-          <tr>
-            <td class="be-name">BE Reflective</td>
-            <td class="guiding-question">
-              How is AI influencing my thinking, learning, and professional
-              growth?
-            </td>
-          </tr>
-        </tbody>
-      </table>
+  </div>
 
-      <p class="intro-text" style="margin-top: 14px;">
-        Together, these five behaviors provide a common language for discussing
-        AI literacy across disciplines. Whether students are writing essays,
-        troubleshooting engines, caring for patients, or designing business
-        plans, the habits of thoughtful AI use remain remarkably consistent.
-      </p>
-    </section>
 
-    <section class="section">
-      <span class="section-title">Learning Over Time</span>
+  <div class="section">
 
-      <p class="intro-text" style="margin-bottom: 14px;">
-        The BE Framework is developmental. Students are not expected to master
-        these behaviors in a single assignment or even a single course.
-        Instead, they build them through repeated practice, reflection, and
-        coaching across their educational journey.
-      </p>
+    <span class="section-title">Learning Over Time</span>
 
-      <div class="arc-grid">
+    <p>
+      The BE Framework describes a developmental journey—not a checklist.
+      Students are not expected to master these behaviors in a single
+      assignment, course, or semester. They develop them through repeated
+      practice, reflection, feedback, and opportunities to apply their judgment
+      in different contexts.
+    </p>
 
-        <div class="arc-card">
-          <h4>Introduction</h4>
-          <p>
-            Students become aware of the BE behaviors and begin recognizing
-            them in their own learning and decision-making.
-          </p>
+    <div class="progression-grid">
+
+      <div class="progression-card">
+
+        <h4>Introduction</h4>
+
+        <div class="stage-sub">
+          Building Awareness
         </div>
 
-        <div class="arc-card">
-          <h4>Exploration</h4>
-          <p>
-            Students practice the behaviors in a variety of course contexts
-            with guidance, feedback, and opportunities to reflect.
-          </p>
+        <p>
+          Students are introduced to the BE behaviors by name and begin
+          recognizing where AI-related decisions appear in their learning.
+          Awareness is the goal. Consistent or independent practice is not yet
+          expected.
+        </p>
+
+      </div>
+
+
+      <div class="progression-card">
+
+        <h4>Exploration</h4>
+
+        <div class="stage-sub">
+          Practicing Across Courses
         </div>
 
-        <div class="arc-card">
-          <h4>Application</h4>
-          <p>
-            Students apply the behaviors independently and transfer their
-            judgment to new tools, situations, and professional contexts.
-          </p>
+        <p>
+          Students practice the behaviors in different course contexts with
+          guidance, feedback, and opportunities to reflect. Their application
+          may still be inconsistent—and that inconsistency is a normal part of
+          development.
+        </p>
+
+      </div>
+
+
+      <div class="progression-card">
+
+        <h4>Application</h4>
+
+        <div class="stage-sub">
+          Program &amp; Workplace Contexts
         </div>
 
-      </div>
-
-      <div class="arc-note">
-        Progress matters more than perfection. The goal is not flawless AI
-        use—it is increasingly thoughtful decision-making.
-      </div>
-    </section>
-
-    <section class="section">
-      <span class="section-title">A Framework for Faculty</span>
-
-      <div class="callout-box">
         <p>
-          The BE Framework is a coaching resource, not a grading system. Its
-          purpose is to help faculty notice where AI literacy naturally appears
-          in their teaching and make those moments more intentional.
+          Students apply the behaviors more independently and consistently.
+          They can explain their reasoning and transfer their judgment to new
+          tools, unfamiliar situations, and discipline-specific professional
+          contexts.
         </p>
 
-        <p>
-          Every discussion about evaluating evidence, documenting sources,
-          reflecting on learning, or making ethical decisions is already an
-          opportunity to build AI literacy. This playbook provides a shared
-          language and practical strategies for supporting that work.
-        </p>
-
-        <p>
-          You do not need to introduce all five behaviors at once. Begin with
-          the behavior that connects most naturally to your course, assignment,
-          or current instructional challenge.
-        </p>
       </div>
-    </section>
 
-    <section class="section">
-      <span class="section-title">About the Framework</span>
+    </div>
 
-      <div class="framework-note">
-        <div class="box-label">Framework Foundation</div>
+    <div class="progression-note">
+      Progression is developmental, not linear. Students may move fluidly
+      between stages depending on the task, tool, stakes, or course context.
+      The goal is not flawless AI use—it is increasingly thoughtful
+      decision-making.
+    </div>
 
-        <p>
-          The BE Framework was developed by the OCTC AI Workgroup as a
-          behavioral interpretation of the Digital Education Council (DEC) AI
-          Literacy Framework. It translates broad AI literacy competencies into
-          observable student behaviors that can be integrated naturally into
-          teaching and learning across disciplines. Additional information
-          about the DEC framework and its relationship to the BE Framework is
-          included in <strong>Appendix A</strong>.
-        </p>
-      </div>
-    </section>
+  </div>
 
-  </main>
 
-  <footer class="page-footer">
+  <div class="section">
+
+    <span class="section-title">A Framework for Faculty</span>
+
+    <ul class="obs-list">
+
+      <li>
+        You do not need to become an AI expert before helping students develop
+        better AI judgment.
+      </li>
+
+      <li>
+        You do not need to introduce all five behaviors at once or add an
+        entirely new assignment.
+      </li>
+
+      <li>
+        You can begin with the behavior that connects most naturally to your
+        course, assignment, or current instructional challenge.
+      </li>
+
+      <li>
+        The framework can support student reflection and faculty coaching
+        without becoming a formal grading instrument.
+      </li>
+
+      <li>
+        Faculty retain responsibility for establishing the expectations for AI
+        use within their own courses and assignments.
+      </li>
+
+    </ul>
+
+  </div>
+
+
+  <div class="tips-section">
+
+    <span class="section-title">
+      You May Already Be Teaching AI Literacy
+    </span>
+
+    <ul class="tips-list">
+
+      <li>
+        Every time you ask students to evaluate evidence or verify a claim, you
+        are supporting <strong>BE Critical</strong>.
+      </li>
+
+      <li>
+        Every time you ask students to document sources or accurately represent
+        their own work, you are supporting <strong>BE Honest</strong>.
+      </li>
+
+      <li>
+        Every time students consider the consequences of a professional
+        decision, you are supporting <strong>BE Responsible</strong>.
+      </li>
+
+      <li>
+        Every time students examine their learning process or explain how they
+        reached a decision, you are supporting <strong>BE Reflective</strong>.
+      </li>
+
+      <li>
+        Every time students consider privacy, limitations, or appropriate tool
+        use, you are supporting <strong>BE Safe</strong>.
+      </li>
+
+    </ul>
+
+  </div>
+
+
+  <div class="section" style="margin-top: 28px;">
+
+    <span class="section-title">About the Framework</span>
+
+    <div class="example-note">
+      The BE Framework was developed by the OCTC AI Workgroup as a
+      student-centered behavioral interpretation of the Digital Education
+      Council AI Literacy Framework. It translates broad AI literacy
+      competencies into observable habits that can be developed through
+      teaching, practice, feedback, and reflection across disciplines.
+      Additional information about the DEC framework and its relationship to
+      the BE Framework is included in <strong>Appendix A</strong>.
+    </div>
+
+  </div>
+
+
+  <div class="page-footer">
+
     <div class="footer-note">
       This guide supports the OCTC AI Literacy Framework, a student-centered
-      interpretation of the Digital Education Council AI Literacy Framework.
+      translation of the Digital Education Council (DEC) AI Literacy Framework.
     </div>
 
     OCTC AI Literacy Faculty Playbook
@@ -574,7 +342,29 @@
     Welcome to the BE Framework
     &nbsp;·&nbsp;
     Version 1.0
-  </footer>
+
+  </div>
+
+</main>
+
+
+<footer class="site-footer">
+
+  <div class="footer-shell">
+
+    <img
+      alt="Owensboro Community and Technical College"
+      src="../images/Owensboro_horiz_RGBrev.png"/>
+
+    <p>AI Literacy Playbook • Version 1.0 • July 2026</p>
+
+    <p>
+      © 2026 Owensboro Community &amp; Technical College
+    </p>
+
+  </div>
+
+</footer>
 
 </body>
 </html>
