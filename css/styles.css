@@ -355,3 +355,56 @@ img { max-width: 100%; }
     border-radius: 8px;
   }
 }
+/* Page navigation above the blue playbook header */
+
+.page-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 14px;
+}
+
+.page-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 96px;
+  height: 64px;
+  padding: 0 24px;
+  border-radius: 14px;
+  background: #e7a614;
+  color: #00467f;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.page-nav:hover,
+.page-nav:focus-visible {
+  background: #f2bc3d;
+  color: #00467f;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.22);
+}
+
+.page-nav:focus-visible {
+  outline: 3px solid #00467f;
+  outline-offset: 3px;
+}
+
+.page-nav-disabled {
+  visibility: hidden;
+}
+
+@media (max-width: 700px) {
+  .page-nav {
+    min-width: 72px;
+    height: 52px;
+    padding: 0 16px;
+    font-size: 2.4rem;
+  }
+}
