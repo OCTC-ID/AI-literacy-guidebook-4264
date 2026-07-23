@@ -376,7 +376,8 @@ img { max-width: 100%; }
   background: #e7a614;
   color: #00467f;
   font-size: 3rem;
-  font-weight: 800;
+  font-weight: 900;
+  letter-spacing: -0.08em;
   line-height: 1;
   text-decoration: none;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
