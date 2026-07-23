@@ -295,62 +295,60 @@ img { max-width: 100%; }
    ========================== */
 
 .intro-page .playbook-header {
-  background-image: none;
-  background-color: var(--octc-blue);
+    background-image: none;
+    background-color: var(--octc-blue);
 }
 
 .intro-page .playbook-header::before,
 .intro-page .playbook-header::after {
-  display: none;
+    display: none;
 }
 
-/* Page navigation above the blue header */
+/* ==========================
+   Introduction Navigation
+   ========================== */
 
-.page-navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin: 0 0 14px;
+.page-navigation{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    margin:0 0 22px;
 }
 
-.page-nav {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 96px;
-  height: 64px;
-  padding: 0;
-  border-radius: 14px;
-  background: var(--octc-gold);
-  color: var(--octc-blue);
-  font-size: 2.5rem;
-  font-weight: 900;
-  line-height: 1;
-  text-decoration: none;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, .16);
-  transition:
-    transform .2s ease,
-    box-shadow .2s ease,
-    background-color .2s ease;
+.page-nav{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    width:58px;
+    height:58px;
+
+    background:var(--octc-gold);
+    color:var(--octc-blue);
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    font-size:2rem;
+    font-weight:900;
+    line-height:1;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.16);
+
+    transition:
+        transform .18s ease,
+        box-shadow .18s ease,
+        background .18s ease;
 }
 
-.page-nav:hover,
-.page-nav:focus-visible {
-  background: #f2bc3d;
-  color: var(--octc-blue);
-  transform: translateY(-2px);
-  box-shadow: 0 5px 14px rgba(0, 0, 0, .22);
+.page-nav:hover{
+    background:#f0b52b;
+    color:var(--octc-blue);
+    transform:translateY(-2px);
+    box-shadow:0 8px 18px rgba(0,0,0,.22);
 }
 
-.page-nav-disabled {
-  visibility: hidden;
-}
-
-@media (max-width: 700px) {
-  .page-nav {
-    width: 72px;
-    height: 52px;
-    font-size: 2rem;
-  }
+.page-nav-disabled{
+    display:none;
 }
