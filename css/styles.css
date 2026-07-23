@@ -308,43 +308,37 @@ img { max-width: 100%; }
    Introduction Navigation
    ========================== */
 
-.page-navigation{
-    max-width:1200px;
-    margin:24px auto -10px;
-    padding:0 24px;
-
-    display:flex;
-    justify-content:flex-end;
+.page-navigation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 22px;
 }
 
-.page-nav{
-    width:56px;
-    height:56px;
+.page-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+  width: 58px;
+  height: 58px;
 
-    border-radius:14px;
+  border-radius: 14px;
+  background: var(--octc-gold);
+  color: var(--octc-blue);
 
-    background:var(--octc-gold);
-    color:var(--octc-blue);
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1;
+  text-decoration: none;
 
-    text-decoration:none;
-
-    font-size:2rem;
-    font-weight:900;
-
-    box-shadow:0 5px 14px rgba(0,0,0,.18);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .16);
 }
 
-.page-nav:hover{
-    background:#f0b52b;
-    color:var(--octc-blue);
-    transform:translateY(-2px);
-    box-shadow:0 8px 18px rgba(0,0,0,.22);
-}
-
-.page-nav-disabled{
-    display:none;
+.page-nav:hover,
+.page-nav:focus-visible {
+  background: #f0b52b;
+  color: var(--octc-blue);
+  transform: translateY(-2px);
 }
