@@ -408,3 +408,24 @@ img { max-width: 100%; }
     font-size: 2.4rem;
   }
 }
+.hero-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.hero-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: .03em;
+    opacity: .9;
+    transition: opacity .2s ease, transform .2s ease;
+}
+
+.hero-nav a:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+}
