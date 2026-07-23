@@ -279,3 +279,14 @@ img { max-width: 100%; }
   .playbook-header { padding:28px 22px; }
   .behavior-bar { padding:10px 22px; }
 }
+/* INTRODUCTION PAGE — REMOVE BOKEH BACKGROUND */
+
+.intro-page .playbook-header {
+  background-image: none;
+  background-color: #00467f;
+}
+
+.intro-page .playbook-header::before,
+.intro-page .playbook-header::after {
+  display: none;
+}
