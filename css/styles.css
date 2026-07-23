@@ -290,3 +290,68 @@ img { max-width: 100%; }
 .intro-page .playbook-header::after {
   display: none;
 }
+/* Hero page navigation */
+
+.hero-navigation {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr) 64px;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+}
+
+.hero-navigation .playbook-header {
+  width: 100%;
+  margin: 0;
+}
+
+.hero-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 110px;
+  border-radius: 10px;
+  background: #e7a614;
+  color: #00467f;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.hero-arrow:hover,
+.hero-arrow:focus-visible {
+  background: #f2bc3d;
+  color: #00467f;
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+}
+
+.hero-arrow:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+.hero-arrow-disabled {
+  visibility: hidden;
+}
+
+@media (max-width: 800px) {
+  .hero-navigation {
+    grid-template-columns: 42px minmax(0, 1fr) 42px;
+    gap: 8px;
+  }
+
+  .hero-arrow {
+    width: 42px;
+    height: 82px;
+    font-size: 30px;
+    border-radius: 8px;
+  }
+}
