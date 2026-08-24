@@ -245,7 +245,14 @@ img { max-width: 100%; }
 
 @media (max-width: 1050px) {
   .nav-shell { align-items:flex-start; flex-direction:column; gap:8px; }
-  .site-links { margin-left:0; width:100%; justify-content:flex-start; overflow-x:auto; flex-wrap:nowrap; }
+  .site-links {
+  margin-left: 0;
+  width: 100%;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  overflow-x: visible;
+  gap: 2px 6px;
+}
   .hero-inner { grid-template-columns:1fr; min-height:auto; }
   .hero-art { max-width:680px; margin:0 auto; }
   .be-card-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
