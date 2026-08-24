@@ -1177,9 +1177,30 @@ img {
   }
 
   .hero-inner {
-    padding: 42px 18px 36px;
-    gap: 38px;
-  }
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 36px 18px 30px;
+}
+
+.hero-copy {
+  width: 100%;
+  max-width: 100%;
+}
+
+.hero-art {
+  width: 100%;
+  max-width: 100%;
+  margin: 30px auto 0;
+}
+
+.hero-art img {
+  display: block;
+  width: 85%;
+  max-width: 360px;
+  height: auto;
+  margin: 0 auto;
+}
 
   .hero h1 {
     font-size: 2.7rem;
