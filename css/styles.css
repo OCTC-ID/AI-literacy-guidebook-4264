@@ -291,9 +291,15 @@ img { max-width: 100%; }
   .info-grid {
     grid-template-columns: 1fr;
   }
-  .hero-art img {
-  width: 70%;
-  max-width: 420px;
+  .hero-art {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-art img {
+  width: min(520px, 90%);
+  max-width: 100%;
   margin: 0 auto;
 }
   .be-card {
@@ -317,10 +323,6 @@ img { max-width: 100%; }
 }
 @media (max-width: 560px) {
   .nav-shell { padding:12px 16px; }
-  .hero-art img {
-  width: 60%;
-  max-width: 300px;
-}
   .logo-link, .logo-link img { width:225px; }
   .site-links a { padding:10px 8px; font-size:.86rem; }
   .hero-inner { padding:42px 18px 36px; }
