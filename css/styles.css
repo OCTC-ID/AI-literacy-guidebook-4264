@@ -507,17 +507,11 @@ img {
 
   border-radius: var(--radius) var(--radius) 0 0;
 
-  background:
-    radial-gradient(
-      circle at 92% 20%,
-      rgba(231, 166, 20, 0.22) 0 72px,
-      transparent 74px
-    ),
-    linear-gradient(
-      135deg,
-      var(--octc-blue-dark),
-      var(--octc-blue)
-    );
+  background: linear-gradient(
+  135deg,
+  var(--octc-blue-dark),
+  var(--octc-blue)
+);
 
   box-shadow: var(--shadow);
 }
