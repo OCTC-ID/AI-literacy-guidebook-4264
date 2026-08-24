@@ -372,6 +372,33 @@ img { max-width: 100%; }
   .playbook-header { padding:28px 22px; }
   .behavior-bar { padding:10px 22px; }
 }
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.playbook-page,
+.hero,
+.hero-inner,
+.hero-copy,
+.hero-art {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.hero-art img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  overflow-wrap: break-word;
+}
 /* INTRODUCTION PAGE — REMOVE BOKEH BACKGROUND */
 
 .intro-page .playbook-header {
