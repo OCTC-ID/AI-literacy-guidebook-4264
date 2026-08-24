@@ -147,8 +147,19 @@ img { max-width: 100%; }
 .icon-circle.gold { background:#fff1d1; color:var(--octc-gold); }
 .be-card h3 { width:100%; margin:18px 0 8px; color:var(--octc-blue-dark); text-align:center; font-size:1.38rem; line-height:1.2; }
 .mini-rule { display:block; width:52px; height:3px; margin:0 auto 20px; border-radius:3px; background:var(--octc-gold); }
-.be-card p { margin:0; font-size:1rem; line-height:1.55; }
-.be-card strong { margin-top:auto; padding-top:24px; color:var(--octc-blue); }
+.be-card p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.55;
+  text-align: center;
+}
+.be-card strong {
+  margin-top: auto;
+  padding-top: 24px;
+  color: var(--octc-blue);
+  align-self: center;
+  text-align: center;
+}
 .support-section { padding:0 0 42px; background:#fff; }
 .support-grid { display:grid; grid-template-columns:1fr 1fr; gap:28px; }
 .support-card { min-height:230px; padding:28px; display:grid; grid-template-columns:58px 1fr; gap:20px; border:1px solid var(--border); border-radius:12px; }
