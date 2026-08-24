@@ -291,6 +291,10 @@ img { max-width: 100%; }
   .info-grid {
     grid-template-columns: 1fr;
   }
+  .be-card {
+  min-height: 0;
+  padding: 24px 22px;
+}
 
   .be-card-grid {
     grid-template-columns: 1fr;
