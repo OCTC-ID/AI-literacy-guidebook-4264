@@ -334,6 +334,10 @@ img { max-width: 100%; }
 }
   .book-mark { font-size:3rem; }
   .hero h1 { font-size:2.7rem; }
+  .be-title {
+  font-size: 2.6rem;
+  line-height: 1.05;
+}
   .be-card-grid { grid-template-columns:1fr; }
   
   .support-card { grid-template-columns:1fr; }
