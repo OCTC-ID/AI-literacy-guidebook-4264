@@ -159,7 +159,7 @@ img { max-width: 100%; }
 .icon-circle { width:74px; height:74px; display:grid; place-items:center; align-self:center; border-radius:50%; font-size:2.25rem; font-weight:800; }
 .icon-circle.blue { background:#e4eff9; color:var(--octc-blue); }
 .icon-circle.gold { background:#fff1d1; color:var(--octc-gold); }
-.be-card h3 { width:100%; margin:18px 0 8px; color:var(--octc-blue-dark); text-align:center; font-size:1.38rem; line-height:1.2; }
+.be-card h3 { width:100%; margin:18px 0 8px; color:var(--octc-blue-dark); text-align:center; font-size:1.6rem; line-height:1.2; }
 .mini-rule { display:block; width:52px; height:3px; margin:0 auto 20px; border-radius:3px; background:var(--octc-gold); }
 .be-card p {
   margin: 0;
