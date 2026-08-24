@@ -339,7 +339,22 @@ img { max-width: 100%; }
   line-height: 1.05;
 }
   .be-card-grid { grid-template-columns:1fr; }
-  
+.hero-art {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.hero-art img {
+  display: block;
+  width: 90%;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}  
   .support-card { grid-template-columns:1fr; }
   .playbook-page { margin-top:20px; padding:0 14px; }
   .playbook-header { padding:28px 22px; }
