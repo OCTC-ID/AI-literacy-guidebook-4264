@@ -552,41 +552,40 @@ img {
 
   pointer-events: none;
 }
+.behavior-critical::after {
+  content: "";
+
+  position: absolute;
+  top: 48px;
+  right: 72px;
+
+  width: 82px;
+  height: 82px;
+
+  border: 12px solid rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
 .behavior-critical::before {
   content: "";
 
   position: absolute;
-  top: 138px;
-  right: 38px;
+  top: 137px;
+  right: 42px;
 
-  width: 70px;
-  height: 14px;
+  width: 82px;
+  height: 12px;
 
   background: rgba(255, 255, 255, 0.14);
-  border-radius: 10px;
+  border-radius: 8px;
 
   transform: rotate(45deg);
   transform-origin: right center;
 
   pointer-events: none;
 }
-
-.behavior-critical::after {
-  content: "";
-
-  position: absolute;
-  top: 34px;
-  right: 54px;
-
-  width: 105px;
-  height: 105px;
-
-  border: 14px solid rgba(255, 255, 255, 0.14);
-  border-radius: 50%;
-
-  pointer-events: none;
-}
-
 
 
 
