@@ -159,7 +159,19 @@ img {
 .site-links a[aria-current="page"]::after {
   background: var(--octc-gold);
 }
+.site-links a:first-child::before {
+  content: "◆";
+  position: absolute;
+  right: -9px;
+  top: 50%;
+  transform: translateY(-50%);
 
+  color: var(--octc-gold);
+  font-size: 0.5rem;
+}
+.site-links a:first-child {
+  margin-right: 12px;
+}
 
 /* =========================================================
    3. Homepage Hero
