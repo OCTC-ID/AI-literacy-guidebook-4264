@@ -554,24 +554,30 @@ img {
 }
 
 
-.behavior-watermark circle,
-.behavior-watermark line {
-  stroke: #ffffff;
-}
-
 .behavior-watermark {
   position: absolute;
   top: 30px;
   right: 40px;
 
-  width: 150px;
-  height: 150px;
+  width: 130px;
+  height: 130px;
 
-  opacity: 0.16;
+  opacity: 0.14;
   z-index: 1;
+
+  transform: scaleX(-1);
 
   pointer-events: none;
 }
+
+.behavior-watermark circle,
+.behavior-watermark line {
+  stroke: #ffffff !important;
+}
+
+
+
+
 
 
 
