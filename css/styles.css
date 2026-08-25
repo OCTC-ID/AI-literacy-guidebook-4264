@@ -552,6 +552,24 @@ img {
 
   pointer-events: none;
 }
+.behavior-critical::before {
+  content: "";
+
+  position: absolute;
+  top: 138px;
+  right: 38px;
+
+  width: 70px;
+  height: 14px;
+
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+
+  transform: rotate(45deg);
+  transform-origin: right center;
+
+  pointer-events: none;
+}
 .behavior-critical::after {
   content: "🔎";
 
@@ -566,6 +584,8 @@ img {
 
   pointer-events: none;
 }
+
+
 
 
 
