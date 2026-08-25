@@ -561,12 +561,16 @@ img {
   width: 145px;
   height: 145px;
 
-  color: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  opacity: 0.14;
 
   pointer-events: none;
+  z-index: 1;
 }
-
-
+.behavior-watermark circle,
+.behavior-watermark line {
+  stroke: #ffffff;
+}
 
 
 
