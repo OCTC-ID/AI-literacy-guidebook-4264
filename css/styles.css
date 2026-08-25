@@ -368,7 +368,11 @@ img {
   background: #fff1d1;
   color: var(--octc-gold);
 }
-
+.card-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--octc-blue);
+}
 .be-card h3 {
   width: 100%;
   margin: 18px 0 8px;
