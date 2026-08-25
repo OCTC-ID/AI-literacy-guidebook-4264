@@ -553,25 +553,25 @@ img {
   pointer-events: none;
 }
 
-.behavior-watermark {
-  position: absolute;
-  top: 28px;
-  right: 36px;
 
-  width: 145px;
-  height: 145px;
-
-  color: #ffffff;
-  opacity: 0.14;
-
-  pointer-events: none;
-  z-index: 1;
-}
 .behavior-watermark circle,
 .behavior-watermark line {
   stroke: #ffffff;
 }
 
+.behavior-watermark {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+
+  width: 150px;
+  height: 150px;
+
+  opacity: 0.16;
+  z-index: 1;
+
+  pointer-events: none;
+}
 
 
 
