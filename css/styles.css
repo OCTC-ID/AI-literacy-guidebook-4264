@@ -167,7 +167,7 @@ img {
   transform: translateY(-50%);
 
   color: var(--octc-gold);
-  font-size: 0.5rem;
+  font-size: 0.7rem;
 }
 .site-links a:first-child {
   margin-right: 12px;
