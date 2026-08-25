@@ -553,7 +553,18 @@ img {
   pointer-events: none;
 }
 
+.behavior-watermark {
+  position: absolute;
+  top: 28px;
+  right: 36px;
 
+  width: 145px;
+  height: 145px;
+
+  color: rgba(255, 255, 255, 0.14);
+
+  pointer-events: none;
+}
 
 
 
