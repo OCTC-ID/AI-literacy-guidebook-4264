@@ -569,8 +569,6 @@ img {
   opacity: 0.14;
   z-index: 1;
 
-  transform: scaleX(-1);
-
   pointer-events: none;
 }
 
