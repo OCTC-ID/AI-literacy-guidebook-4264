@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Write Your AI Use Statement – AI Literacy Faculty Workbook</title>
+<link rel="stylesheet" href="../css/styles.css?v=10">
+<link rel="stylesheet" href="workbook.css?v=1">
+</head>
+<body class="guide-page intro-page workbook-page" data-workbook="ai-statement">
+
+<header class="site-header"><div class="nav-shell">
+<a class="logo-link" aria-label="AI Literacy Playbook home" href="../index.html"><img alt="Owensboro Community and Technical College" src="../images/Owensboro_horiz_RGBrev.png"></a>
+<nav class="site-links" aria-label="Workbook navigation">
+<a href="../index.html">PLAYBOOK</a>
+<a aria-current="page" href="ai-statement.html">AI Statement</a>
+<a href="one-change.html">One Change</a>
+<a href="conversations.html">Conversations</a>
+</nav></div></header>
+
+<main class="playbook-page">
+
+<div class="playbook-header">
+<div class="playbook-label">AI Literacy Faculty Workbook</div>
+<div class="be-title">Write Your AI Use Statement</div>
+<div class="be-subtitle">Your course, your reasons, in your words.</div>
+</div>
+<div class="behavior-bar">Workbook &nbsp;&middot;&nbsp; Exercise 1</div>
+
+<div class="wb-card"><span class="wb-label">You'll leave with</span><p>An AI use statement for your syllabus, a sentence students can use to tell you how they used AI, and a short AI label for each of your main assignments.</p></div>
+
+<div class="section wb-lesson">
+<span class="section-title">Three Levels of AI Use</span>
+
+<p>A lot of course AI policies try to settle the question once for the whole course: students can use AI, or they can't. The trouble is that most courses have some assignments where AI could genuinely help and others where it would skip the learning. So instead of one rule, it works better to decide assignment by assignment. There are three levels to choose from.</p>
+
+<h3>No AI</h3>
+<p>Students complete the work on their own. This fits when the skill itself is what you're teaching, like a first draft where students work out their argument, math they need to be able to do without help, or a care plan they'll eventually write on the job. Choosing No AI for these assignments gives students the practice they need.</p>
+<p class="wb-example">Example: An in-class reflection on a clinical experience, written in the student's own words.</p>
+
+<h3>AI-supported</h3>
+<p>Students can use AI for specific parts of the work, but the thinking and the final product are theirs. This fits when some parts of an assignment matter for learning and others don't. The key is to name which parts AI can help with. For example: "You can use AI to brainstorm and check grammar, but the analysis needs to be your own."</p>
+<p class="wb-example">Example: A business plan where AI can help format the financial tables, but the market analysis and recommendations come from the student.</p>
+
+<h3>AI-integrated</h3>
+<p>Learning to use AI well is part of the assignment. This fits when students will run into AI in their field and need practice judging what it gives them. They might evaluate AI output, compare it to a standard, or explain how they used it.</p>
+<p class="wb-example">Example: Welding students ask AI for a procedure, check it against the actual code, and mark what it got wrong.</p>
+
+<h3>Choosing a level</h3>
+<p>For each assignment, it helps to ask:</p>
+<ol>
+<li>What is this assignment meant to teach?</li>
+<li>Would AI help students learn that, or do the work for them?</li>
+<li>Will students use AI for this kind of work in their field?</li>
+</ol>
+<p>If AI would do the learning for them, No AI is probably the right call. If it could handle the parts that aren't the focus, AI-supported may fit. If using AI well is something they'll need on the job, AI-integrated is worth considering.</p>
+
+<h3>A few tips</h3>
+<ul>
+<li>Tell students why you chose each level. They're more likely to follow an expectation they understand.</li>
+<li>Put the level in the assignment instructions, not just the syllabus, since that's where students will look.</li>
+<li>Most courses end up using more than one level, and that's normal.</li>
+<li>You can always adjust a level next term if an assignment isn't working the way you hoped.</li>
+</ul>
+</div>
+
+<div class="section">
+<span class="section-title">Try It</span>
+<p class="wb-screen-only">Work through the steps below, or skip to the Copilot prompt at the end and let it interview you. Your answers stay in this browser only. To keep a copy, choose <strong>Print or save as PDF</strong>.</p>
+
+<div class="wb-tools">
+  <button class="wb-button" type="button" data-wb="print">Print or save as PDF</button>
+  <button class="wb-button secondary" type="button" data-wb="clear">Clear my answers</button>
+  <span class="wb-status" aria-live="polite"></span>
+</div>
+
+<h2 class="wb-step"><span>Step 1</span>Your course</h2>
+<div class="wb-details">
+<div class="wb-question"><label for="course">Course</label><input id="course" type="text"><div class="wb-answer-print"></div></div>
+<div class="wb-question"><label for="term">Term</label><input id="term" type="text"><div class="wb-answer-print"></div></div>
+</div>
+<div class="wb-question"><label for="students">Who are your students?<span class="wb-hint">Program, level, online or in person, anything that shapes how they work.</span></label><textarea id="students"></textarea><div class="wb-answer-print"></div></div>
+
+<h2 class="wb-step"><span>Step 2</span>What students need to learn to do</h2>
+<div class="wb-question"><label for="learn">What do students most need to learn to do on their own in this course?<span class="wb-hint">Think about the skills your course exists to build, not just the content.</span></label><textarea id="learn"></textarea><div class="wb-answer-print"></div></div>
+<div class="wb-question"><label for="seen">Where have you seen AI help, or get in the way of, that learning?</label><textarea id="seen"></textarea><div class="wb-answer-print"></div></div>
+
+<h2 class="wb-step"><span>Step 3</span>Sort your assignments</h2>
+<p>List your main assignments and choose a level for each. Use the three questions from the lesson, and write a quick note on why.</p>
+<div class="wb-sort-head"><div>Assignment</div><div>Level</div><div>Why this level</div></div>
+<div class="wb-sort-row">
+  <div class="wb-question"><label class="visually-hidden" for="a1">Assignment 1</label><input id="a1" type="text"><div class="wb-answer-print"></div></div>
+  <div class="wb-question"><label class="visually-hidden" for="l1">Level for assignment 1</label><select id="l1"><option value="">Choose a level</option><option value="no">No AI</option><option value="sup">AI-supported</option><option value="int">AI-integrated</option><option value="unsure">Not sure yet</option></select><div class="wb-answer-print"></div></div>
+  <div class="wb-question"><label class="visually-hidden" for="w1">Why this level, for assignment 1</label><textarea id="w1"></textarea><div class="wb-answer-print"></div></div>
+</div>
+<div class="wb-sort-row">
+  <div class="wb-question"><label class="visually-hidden" for="a2">Assignment 2</label><input id="a2" type="text"><div class="wb-answer-print"></div></div>
+  <div class="wb-question"><label class="visually-hidden" for="l2">Level for assignment 2</label><select id="l2"><option value="">Choose a level</option><option value="no">No AI</option><option value="sup">AI-supported</option><option value="int">AI-integrated</option><option value="unsure">Not sure yet</option></select><div class="wb-answer-print"></div></div>
+  <div class="wb-question"><label class="visually-hidden" for="w2">Why this level, for assignment 2</label><textarea id="w2"></textarea><div class="wb-answer-print"></div></div>
+</div>
+<div class="wb-sort-row">
+  <div class="wb-question"><label class="visually-hidden" for="a3">Assignment 3</label><input id="a3" type="text"><div class="wb-answer-print"></div></div>
+  <div class="wb-question"><label class="visually-hidden" for="l3">Level for assignment 3</label><select id="l3"><option value="">Choose a level</option><option value="no">No AI</option><option value="sup">AI-supported</option><option value="int">AI-integrated</option><option value="unsure">Not sure yet</option></select><div class="wb-answer-print"></div></div>
+  <div class="wb-question"><label class="visually-hidden" for="w3">Why this level, for assignment 3</label><textarea id="w3"></textarea><div class="wb-answer-print"></div></div>
+</div>
+<div class="wb-sort-row">
+  <div class="wb-question"><label class="visually-hidden" for="a4">Assignment 4</label><input id="a4" type="text"><div class="wb-answer-print"></div></div>
+  <div class="wb-question"><label class="visually-hidden" for="l4">Level for assignment 4</label><select id="l4"><option value="">Choose a level</option><option value="no">No AI</option><option value="sup">AI-supported</option><option value="int">AI-integrated</option><option value="unsure">Not sure yet</option></select><div class="wb-answer-print"></div></div>
+  <div class="wb-question"><label class="visually-hidden" for="w4">Why this level, for assignment 4</label><textarea id="w4"></textarea><div class="wb-answer-print"></div></div>
+</div>
+<div class="wb-sort-row">
+  <div class="wb-question"><label class="visually-hidden" for="a5">Assignment 5</label><input id="a5" type="text"><div class="wb-answer-print"></div></div>
+  <div class="wb-question"><label class="visually-hidden" for="l5">Level for assignment 5</label><select id="l5"><option value="">Choose a level</option><option value="no">No AI</option><option value="sup">AI-supported</option><option value="int">AI-integrated</option><option value="unsure">Not sure yet</option></select><div class="wb-answer-print"></div></div>
+  <div class="wb-question"><label class="visually-hidden" for="w5">Why this level, for assignment 5</label><textarea id="w5"></textarea><div class="wb-answer-print"></div></div>
+</div>
+
+
+<h2 class="wb-step"><span>Step 4</span>How students tell you</h2>
+<div class="wb-question"><label for="disclose">How should students let you know when and how they used AI?<span class="wb-hint">A sentence at the end of the assignment? A note in the submission comments? Something else?</span></label><textarea id="disclose"></textarea><div class="wb-answer-print"></div></div>
+<div class="wb-question"><label for="sample">Write a sample sentence students could use.<span class="wb-hint">For example: "I used Copilot to brainstorm topic ideas. I chose the topic and wrote the paper myself."</span></label><textarea id="sample"></textarea><div class="wb-answer-print"></div></div>
+
+<h2 class="wb-step"><span>Step 5</span>When something goes outside the policy</h2>
+<div class="wb-question"><label for="outside">What will you do if a student uses AI in a way your policy doesn't allow?<span class="wb-hint">Think about the conversation first. How does this connect to your academic integrity section?</span></label><textarea id="outside"></textarea><div class="wb-answer-print"></div></div>
+
+<h2 class="wb-step"><span>Step 6</span>Draft your statement</h2>
+<p>Pull your answers together into a statement written to your students. A simple structure: why AI use varies in your course, what each level means, how to tell you when they used AI, and what to do if they're not sure.</p>
+<div class="wb-question"><label for="draft">Your AI use statement</label><textarea id="draft"></textarea><div class="wb-answer-print"></div></div>
+</div>
+
+<div class="wb-card wb-prompt">
+<span class="wb-label">Or talk it through with Copilot</span>
+<p>Paste this into Copilot. It will interview you one question at a time, then draft your statement, a disclosure sentence, and assignment labels. Don't paste in student names or student work, and read the draft carefully before you use it. Check anything that depends on OCTC or KCTCS policy.</p>
+<pre id="policy-prompt">I&#x27;m a community college instructor writing the AI use policy for my
+course syllabus. My syllabus has a separate academic integrity section,
+so this policy covers how students may and may not use AI in my course,
+and why.
+
+Interview me before you write anything. Ask one question at a time and
+wait for my answer. Keep it to about 8 questions. If I&#x27;m unsure, give me
+two or three options with the trade-offs. If my answers are vague or
+contradict each other, gently push back. Don&#x27;t draft the policy until
+I say &quot;ready.&quot;
+
+Find out:
+- My course and my students (program, level, online or in person)
+- What students most need to learn to do on their own in this course
+- My main assignments, and which level of AI use fits each one:
+    No AI: students do the work without AI.
+    AI-supported: AI can help with specific parts; students do the
+    thinking and own the result.
+    AI-integrated: using AI well is part of what the assignment teaches.
+- Where I&#x27;ve seen AI help or get in the way of learning
+- How students should tell me when and how they used AI
+- What happens if a student uses AI in a way the policy doesn&#x27;t allow,
+  and how that connects to my academic integrity section
+
+When I say &quot;ready,&quot; write:
+1. The policy, written to students in plain, warm, direct language,
+   one page or less. Explain the reason behind each expectation,
+   tell students what to do when they&#x27;re unsure, and remind them not
+   to put personal information or other people&#x27;s work into AI tools.
+2. A sample sentence students can use to disclose their AI use.
+3. A one-line AI label for each assignment that I can paste into the
+   assignment instructions.
+
+Ground rules:
+- Don&#x27;t make up college policies, consequences, or approved tools.
+  Flag anything that depends on OCTC or KCTCS policy for me to check.
+- Make sure the policy doesn&#x27;t conflict with disability accommodations
+  or with tools multilingual students rely on. Flag anything I should
+  check with accessibility services.
+- Don&#x27;t suggest AI detection tools as evidence.
+
+After the draft, ask me what doesn&#x27;t sound like me, and revise.</pre>
+<button class="wb-button secondary wb-copy" type="button" data-wb-copy="policy-prompt">Copy prompt</button>
+</div>
+
+</main>
+
+<footer class="site-footer"><div class="footer-shell">
+<img alt="Owensboro Community and Technical College" src="../images/Owensboro_horiz_RGBrev.png">
+<p>AI Literacy Faculty Workbook &bull; Draft &bull; October 2026</p>
+<p>&copy; 2026 Owensboro Community &amp; Technical College</p>
+</div></footer>
+
+<script src="workbook.js?v=1"></script>
+</body>
+</html>
