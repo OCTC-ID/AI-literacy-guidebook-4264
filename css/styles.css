@@ -770,9 +770,54 @@ img {
   padding: 14px 0 12px;
   background: none;
   border-radius: 0;
-  border-bottom: 3px solid var(--octc-gold);
+  border-bottom: 1px solid var(--border);
   color: var(--octc-blue);
   box-shadow: none;
+}
+
+
+/* Appendix crosswalk table */
+
+.crosswalk-wrap {
+  overflow-x: auto;
+}
+
+.crosswalk {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.crosswalk th,
+.crosswalk td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+.crosswalk thead th {
+  background: var(--octc-blue);
+  color: #fff;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.crosswalk tbody th {
+  white-space: nowrap;
+}
+
+.crosswalk tbody th a {
+  color: var(--octc-blue-dark);
+  font-weight: 800;
+}
+
+.crosswalk tbody tr:nth-child(even) {
+  background: var(--surface-alt);
 }
 
 
