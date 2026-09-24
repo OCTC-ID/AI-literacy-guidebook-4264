@@ -1459,6 +1459,18 @@ img {
 }
 
 
+/* BE pages: where each stage is typically emphasized.
+   Blue italic, regular weight, so it reads as context, not a second heading. */
+
+.stage-sub.stage-context {
+  color: var(--octc-blue);
+  font-size: 0.84rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+
 /* Mobile polish: hide the BE header watermark symbols on narrow screens,
    where they sit behind the page title. */
 
