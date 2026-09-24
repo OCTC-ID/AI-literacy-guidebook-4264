@@ -1087,7 +1087,7 @@ img {
 .bb-prompt-label {
   color: var(--octc-blue);
 
-  font-size: 0.69rem;
+  font-size: 0.75rem;
   font-weight: 850;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1455,5 +1455,19 @@ img {
 
   .tips-section {
     padding: 24px 22px;
+  }
+}
+
+
+/* Mobile polish: hide the BE header watermark symbols on narrow screens,
+   where they sit behind the page title. */
+
+@media (max-width: 560px) {
+  .behavior-safe::after,
+  .behavior-honest::after,
+  .behavior-responsible::after,
+  .behavior-reflective::after,
+  .behavior-watermark {
+    display: none;
   }
 }
