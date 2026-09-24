@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/32622549/README.md)
 # AI Literacy Faculty Playbook
 
 A faculty guide to the **BE Framework**: five habits students develop to use AI thoughtfully in their learning and work.
