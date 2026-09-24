@@ -1,3 +1,4 @@
+
 # AI Literacy Faculty Playbook
 
 A faculty guide to the **BE Framework**: five habits students develop to use AI thoughtfully in their learning and work.
@@ -65,7 +66,7 @@ Questions, or interested in adapting the playbook? Contact Stephanie Self, Instr
 
 ## Notes for editing
 
-- **Stylesheet caching:** every page links to the stylesheet with a version tag (`styles.css?v=9`). After changing `styles.css`, increase the number on every page that uses the change so browsers load the new version.
+- **Stylesheet caching:** every page links to the stylesheet with a version tag (`styles.css?v=10`). After changing `styles.css`, increase the number on every page that uses the change so browsers load the new version.
 - **Two page styles:** Welcome, How to Use, and the appendices use the `intro-page` class on `<body>` for an open layout that matches the home page. The five BE pages use the navy header card. Keep new reference pages on `intro-page`.
 - **Stage settings:** the short line under each stage name on the BE pages ("First-Year Experience courses," etc.) uses the `stage-context` class. These are typical examples, not placements.
 - **Accessibility:** keep the viewport tag, alt text, and `visually-hidden` labels in place. Links that open a new tab include a hidden "(opens in a new tab)" note for screen readers.
