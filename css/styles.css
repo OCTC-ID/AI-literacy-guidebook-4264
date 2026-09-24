@@ -506,6 +506,15 @@ img {
   text-decoration: none;
 }
 
+/* Links inside card text stay inline, like normal text links */
+.support-card p a {
+  display: inline;
+  margin-top: 0;
+
+  font-weight: inherit;
+  text-decoration: underline;
+}
+
 
 /* =========================================================
    6. Interior Playbook Pages
