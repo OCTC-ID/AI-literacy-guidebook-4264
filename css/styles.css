@@ -173,6 +173,31 @@ img {
   margin-right: 12px;
 }
 
+/* Button-style nav link (the WORKBOOK link on playbook pages) */
+.site-links a.nav-button {
+  margin-left: 10px;
+  padding: 9px 16px;
+
+  background: var(--octc-gold);
+  color: var(--octc-blue-dark);
+  border-radius: 8px;
+}
+
+.site-links a.nav-button::after {
+  display: none;
+}
+
+.site-links a.nav-button:hover,
+.site-links a.nav-button:focus-visible {
+  background: #f3bb3a;
+  color: var(--octc-blue-dark);
+}
+
+.site-links a.nav-button:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
 /* =========================================================
    3. Homepage Hero
    ========================================================= */
@@ -1285,6 +1310,11 @@ img {
     gap: 8px;
   }
 
+  /* In a column, the 285px flex-basis became the logo's height; size it by its image instead */
+  .logo-link {
+    flex: 0 0 auto;
+  }
+
   .site-links {
     width: 100%;
     margin-left: 0;
@@ -1395,6 +1425,12 @@ img {
     font-size: 0.9rem;
     text-align: center;
     white-space: nowrap;
+  }
+
+  .site-links a.nav-button {
+    grid-column: 1 / -1;
+    margin: 6px 0 0;
+    padding: 10px 4px;
   }
 
   .hero-inner {
