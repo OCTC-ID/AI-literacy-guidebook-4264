@@ -449,3 +449,9 @@
   font-weight: 700;
   line-height: 1.45;
 }
+
+/* Side-by-side fields: labels line up at the top and boxes line up at the bottom,
+   even when one label or hint wraps longer than the other */
+.wb-details { align-items: stretch; }
+.wb-details .wb-question { display: flex; flex-direction: column; }
+.wb-details .wb-question label { flex: 1 0 auto; }
