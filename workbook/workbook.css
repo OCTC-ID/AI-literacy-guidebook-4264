@@ -440,3 +440,12 @@
 @media (max-width: 700px) {
   .wb-split { grid-template-columns: 1fr; }
 }
+
+/* Visible question label for a checkbox dropdown (not a <label>, since it names a group) */
+.wb-question-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--octc-blue-dark);
+  font-weight: 700;
+  line-height: 1.45;
+}
