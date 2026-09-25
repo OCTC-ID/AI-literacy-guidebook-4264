@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 440" role="img" aria-labelledby="paperTitle paperDesc">
+<title id="paperTitle">Worksheet and pen</title><desc id="paperDesc">A blue and gold line illustration of a worksheet with check boxes and a pen, with rays rising behind it.</desc>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <!-- rays, matching the playbook's open book -->
+  <g stroke="#e7a614" stroke-width="8">
+    <path d="M340 75V18"/><path d="M302 82l-18-55"/><path d="M265 96l-34-48"/><path d="M233 119l-48-35"/><path d="M211 151l-55-18"/>
+    <path d="M378 82l18-55"/><path d="M415 96l34-48"/><path d="M447 119l48-35"/><path d="M469 151l55-18"/>
+  </g>
+  <!-- worksheet -->
+  <g transform="rotate(-5 340 255)">
+    <path d="M222 100h170l52 52v252H222z" fill="#fff" stroke="#00467f" stroke-width="9"/>
+    <path d="M392 100v52h52" stroke="#00467f" stroke-width="9"/>
+    <!-- title line -->
+    <path d="M252 138h110" stroke="#00467f" stroke-width="8"/>
+    <!-- checklist rows -->
+    <rect x="252" y="182" width="24" height="24" rx="4" stroke="#00467f" stroke-width="5"/>
+    <path d="M257 194l6 7 12-15" stroke="#e7a614" stroke-width="5"/>
+    <path d="M294 194h118" stroke="#e7a614" stroke-width="5"/>
+    <rect x="252" y="232" width="24" height="24" rx="4" stroke="#00467f" stroke-width="5"/>
+    <path d="M257 244l6 7 12-15" stroke="#e7a614" stroke-width="5"/>
+    <path d="M294 244h118" stroke="#e7a614" stroke-width="5"/>
+    <rect x="252" y="282" width="24" height="24" rx="4" stroke="#00467f" stroke-width="5"/>
+    <path d="M294 294h96" stroke="#e7a614" stroke-width="5"/>
+    <!-- writing lines -->
+    <path d="M252 340h160" stroke="#00467f" stroke-width="4" opacity=".35"/>
+    <path d="M252 370h120" stroke="#00467f" stroke-width="4" opacity=".35"/>
+  </g>
+  <!-- pen, tip resting near the unchecked box -->
+  <g transform="translate(372 316) rotate(-48)">
+    <path d="M0 0l40-15v30z" fill="#fff" stroke="#00467f" stroke-width="7"/>
+    <path d="M0 0l12-4.5v9z" fill="#00467f" stroke="#00467f" stroke-width="3"/>
+    <rect x="40" y="-18" width="158" height="36" rx="7" fill="#00467f" stroke="#00467f" stroke-width="4"/>
+    <rect x="150" y="-18" width="18" height="36" fill="#e7a614" stroke="#e7a614" stroke-width="2"/>
+  </g>
+</g></svg>
