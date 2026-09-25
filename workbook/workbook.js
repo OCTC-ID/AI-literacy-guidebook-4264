@@ -39,7 +39,7 @@
       if (text) {
         /* Short names keep the box on one line, so the row doesn't grow */
         var short = picked.map(function (v) { return v.replace(/^BE /, ''); }).join(', ');
-        text.textContent = picked.length ? short : 'Choose behaviors';
+        text.textContent = picked.length ? short : (text.getAttribute('data-empty') || 'Choose behaviors');
         text.parentNode.title = picked.join(', ');
       }
     } else if (el.tagName === 'SELECT') {
