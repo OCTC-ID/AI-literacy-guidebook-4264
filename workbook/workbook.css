@@ -455,3 +455,18 @@
 .wb-details { align-items: stretch; }
 .wb-details .wb-question { display: flex; flex-direction: column; }
 .wb-details .wb-question label { flex: 1 0 auto; }
+
+/* ---------- Start Here title page ---------- */
+.wb-hero .hero-inner { min-height: 480px; }
+.wb-hero .hero-art img { width: clamp(280px, 42vw, 560px); }
+.wb-eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--octc-blue);
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+#path { scroll-margin-top: 20px; }
+@media print { .wb-hero .hero-art, .wb-hero .hero-cta { display: none; } }
