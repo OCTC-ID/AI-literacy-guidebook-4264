@@ -255,3 +255,124 @@
   .wb-sort-head { display: grid; }
   .wb-step { break-after: avoid; }
 }
+
+/* Credit / attribution card (prints) */
+.wb-credit { border-left-color: var(--muted); }
+.wb-credit p + p { margin-top: 10px; }
+.wb-credit a { color: var(--octc-blue); }
+.wb-cite { color: var(--muted); font-size: 0.86rem; }
+
+/* Checkpoint plan rows (4 columns) and lesson tables */
+.wb-sort-head.wb-plan-row,
+.wb-sort-row.wb-plan-row { grid-template-columns: 0.8fr 1.3fr 1.1fr 1.8fr; }
+.wb-lesson .wb-table { margin: 10px 0 18px; }
+.wb-lesson .wb-table tbody th { color: var(--octc-blue-dark); }
+@media (max-width: 700px) {
+  .wb-sort-row.wb-plan-row { grid-template-columns: 1fr; }
+}
+@media print {
+  .wb-sort-row.wb-plan-row,
+  .wb-sort-head.wb-plan-row { grid-template-columns: 0.8fr 1.3fr 1.1fr 1.8fr !important; }
+}
+
+/* Checkbox dropdown (choose several) */
+.wb-dropdown { position: relative; }
+.wb-dropdown summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 3.2rem;
+  padding: 10px 12px 10px 14px;
+  border: 1px solid #d9c98f;
+  border-left: 4px solid var(--octc-gold);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.35;
+  cursor: pointer;
+  list-style: none;
+}
+.wb-dropdown summary::-webkit-details-marker { display: none; }
+.wb-dropdown summary::after {
+  content: "";
+  flex: none;
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  border-right: 2px solid var(--octc-blue);
+  border-bottom: 2px solid var(--octc-blue);
+  transform: rotate(45deg);
+}
+.wb-dropdown[open] summary::after { margin-top: 4px; transform: rotate(-135deg); }
+.wb-dropdown summary:focus-visible {
+  outline: 3px solid var(--octc-blue);
+  outline-offset: 2px;
+}
+.wb-dropdown fieldset {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: 100%;
+  width: max-content;
+  margin: 0;
+  padding: 8px 6px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+.wb-question .wb-dropdown label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 7px 10px;
+  border-radius: 6px;
+  color: var(--ink);
+  font-weight: 400;
+  cursor: pointer;
+}
+.wb-question .wb-dropdown label:hover { background: var(--octc-blue-soft); }
+.wb-question .wb-dropdown input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  accent-color: var(--octc-blue);
+}
+.wb-question .wb-dropdown input[type="checkbox"]:focus-visible {
+  outline: 3px solid var(--octc-blue);
+  outline-offset: 2px;
+}
+.wb-dropdown-note {
+  margin: 4px 10px 2px;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+/* Open as a floating bubble at every screen size, so nothing below moves */
+.wb-dropdown fieldset { max-width: calc(100vw - 32px); }
+.wb-dropdown-text {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media print {
+  .wb-dropdown { display: none !important; }
+}
+
+/* Save message: reserve its line on narrow screens so the page doesn't jump when it appears */
+@media (max-width: 700px) {
+  .wb-status { flex-basis: 100%; min-height: 1.4em; line-height: 1.4; }
+}
+
+/* Visible label for the dropdown on narrow screens, matching the other fields */
+.wb-multi-label { display: none; }
+@media (max-width: 700px) {
+  .wb-multi-label { display: block; margin: 0 0 6px; color: var(--octc-blue-dark); font-weight: 700; }
+}
+@media print { .wb-multi-label { display: none !important; } }
