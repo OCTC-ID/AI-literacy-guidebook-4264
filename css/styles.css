@@ -173,29 +173,58 @@ img {
   margin-right: 12px;
 }
 
-/* Button-style nav link (the WORKBOOK link on playbook pages) */
+/* Button-style nav link (WORKBOOK on playbook pages, PLAYBOOK on workbook pages) */
 .site-links a.nav-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
   margin-left: 10px;
   padding: 9px 16px;
 
-  background: var(--octc-gold);
+  background: linear-gradient(180deg, #f6c24a, var(--octc-gold));
   color: var(--octc-blue-dark);
   border-radius: 8px;
+  box-shadow:
+    inset 0 -3px 0 #c98a07,
+    0 4px 10px rgba(0, 0, 0, 0.18);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .site-links a.nav-button::after {
   display: none;
 }
 
+.site-links a.nav-button .nav-icon {
+  width: 20px;
+  height: 20px;
+  flex: none;
+}
+
 .site-links a.nav-button:hover,
 .site-links a.nav-button:focus-visible {
-  background: #f3bb3a;
+  background: linear-gradient(180deg, #f6c24a, var(--octc-gold));
   color: var(--octc-blue-dark);
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 -3px 0 #c98a07,
+    0 8px 16px rgba(0, 0, 0, 0.25);
 }
 
 .site-links a.nav-button:focus-visible {
   outline: 3px solid #fff;
   outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-links a.nav-button,
+  .site-links a.nav-button:hover {
+    transform: none;
+    transition: none;
+  }
 }
 
 /* =========================================================
@@ -1429,6 +1458,7 @@ img {
 
   .site-links a.nav-button {
     grid-column: 1 / -1;
+    justify-content: center;
     margin: 6px 0 0;
     padding: 10px 4px;
   }
