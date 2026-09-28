@@ -116,6 +116,84 @@
     });
   });
 
+
+  /* AI label maker (Exercise 1): builds a Blackboard-ready label with inline styles only,
+     since Blackboard strips <style> blocks and classes */
+  var tagLevel = document.getElementById('tag-level');
+  if (tagLevel) {
+    var tagText = document.getElementById('tag-text');
+    var tagPolicy = document.getElementById('tag-policy');
+    var tagPreview = document.getElementById('tag-preview');
+    var tagStatus = document.querySelector('.wb-tag-status');
+    var LEVELS = {
+      no:  { name: 'No AI', on: 0, text: 'Complete this assignment on your own, without AI tools.' },
+      sup: { name: 'AI-supported', on: 1, text: 'You may use AI to [brainstorm / check grammar / ...]. The thinking and the final work must be your own.' },
+      int: { name: 'AI-integrated', on: 2, text: 'Using AI is part of this assignment. Follow the steps in the instructions, and tell me how you used it.' }
+    };
+    var edited = false;
+    function esc(t) { return t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+    function dots(on) {
+      var h = '';
+      for (var i = 0; i < 2; i++) {
+        h += i < on
+          ? '<span style="color:#e7a614;">&#9679;</span>'
+          : '<span style="color:#00467f;">&#9675;</span>';
+      }
+      return h;
+    }
+    function tagHTML() {
+      var L = LEVELS[tagLevel.value];
+      var h = '<div style="display:inline-block;max-width:640px;margin:0 0 12px 0;padding:10px 16px;background:#ffffff;border:1px solid #d9e2ea;border-left:5px solid #e7a614;border-radius:8px;font-family:Arial,Helvetica,sans-serif;">'
+        + '<p style="margin:0 0 4px 0;font-size:16px;font-weight:bold;color:#00345f;">'
+        + '<span style="font-size:18px;letter-spacing:2px;">' + dots(L.on) + '</span>&nbsp; AI use: ' + L.name + '</p>'
+        + '<p style="margin:0;font-size:14px;line-height:1.5;color:#17212b;">' + esc(tagText.value) + '</p>';
+      if (tagPolicy.checked) {
+        h += '<p style="margin:6px 0 0 0;font-size:13px;color:#52606d;">See the AI Course Policy in the syllabus.</p>';
+      }
+      return h + '</div>';
+    }
+    function tagPlain() {
+      var L = LEVELS[tagLevel.value];
+      var d = ''; for (var i = 0; i < 2; i++) d += i < L.on ? '\u25CF' : '\u25CB';
+      return d + ' AI use: ' + L.name + '\n' + tagText.value + (tagPolicy.checked ? '\nSee the AI Course Policy in the syllabus.' : '');
+    }
+    function render() { tagPreview.innerHTML = tagHTML(); }
+    function setDefault() { tagText.value = LEVELS[tagLevel.value].text; }
+    tagLevel.addEventListener('change', function () { if (!edited) setDefault(); render(); });
+    tagText.addEventListener('input', function () { edited = true; render(); });
+    tagPolicy.addEventListener('change', render);
+    setDefault(); render();
+
+    function flash(msg) {
+      if (!tagStatus) return;
+      tagStatus.textContent = msg;
+      setTimeout(function () { tagStatus.textContent = ''; }, 2500);
+    }
+    function copyRich() {
+      var html = tagHTML(), plain = tagPlain();
+      if (navigator.clipboard && window.ClipboardItem) {
+        var item = new ClipboardItem({
+          'text/html': new Blob([html], { type: 'text/html' }),
+          'text/plain': new Blob([plain], { type: 'text/plain' })
+        });
+        return navigator.clipboard.write([item]).then(function () { flash('Label copied. Paste it into Blackboard.'); }, fallback);
+      }
+      fallback();
+      function fallback() {
+        var r = document.createRange(); r.selectNodeContents(tagPreview);
+        var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+        try { document.execCommand('copy'); flash('Label copied. Paste it into Blackboard.'); }
+        catch (e) { flash('Select the preview and copy it by hand.'); }
+        sel.removeAllRanges();
+      }
+    }
+    document.getElementById('tag-copy').addEventListener('click', copyRich);
+    document.getElementById('tag-copy-html').addEventListener('click', function () {
+      if (!navigator.clipboard) { flash('Copy is not available in this browser.'); return; }
+      navigator.clipboard.writeText(tagHTML()).then(function () { flash('HTML copied.'); }, function () { flash('Copy did not work in this browser.'); });
+    });
+  }
+
   /* Copy buttons for AI prompts */
   document.querySelectorAll('[data-wb-copy]').forEach(function (btn) {
     btn.addEventListener('click', function () {

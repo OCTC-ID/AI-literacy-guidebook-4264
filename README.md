@@ -5,8 +5,8 @@ Two connected faculty resources for the **BE Framework**, five habits students d
 - **The playbook** explains the five behaviors and how students grow in them.
 - **The workbook** helps faculty put one behavior to work in a course they teach.
 
-**View the playbook:** https://octc-id.github.io/AI-literacy-guidebook-4264/
-**View the workbook:** https://octc-id.github.io/AI-literacy-guidebook-4264/workbook/start-here.html
+**View the playbook:** https://octc-id.github.io/AI-literacy-playbook/
+**View the workbook:** https://octc-id.github.io/AI-literacy-playbook/workbook/start-here.html
 
 ## What this is
 
@@ -110,11 +110,12 @@ Questions, or interested in adapting the playbook? Contact Stephanie Self, Instr
 ## Notes for editing
 
 - **Upload files together.** When a page and a stylesheet or script change at the same time, upload all of them. A new page with an old `workbook.css` or `styles.css` will look broken.
-- **Version tags.** Pages link to shared files with version tags: `styles.css?v=12`, `workbook.css?v=11`, `workbook.js?v=4`. After changing one of those files, raise its number on every page that uses it so browsers load the new version.
+- **Version tags.** Pages link to shared files with version tags: `styles.css?v=12`, `workbook.css?v=12`, `workbook.js?v=5`. After changing one of those files, raise its number on every page that uses it so browsers load the new version.
 - **Two page styles in the playbook:** Welcome, How to Use, and the appendices use the `intro-page` class on `<body>` for an open layout that matches the home page. The five BE pages use the navy header card. Keep new reference pages on `intro-page`.
 - **Stage settings:** the short line under each stage name on the BE pages ("First-Year Experience courses," etc.) uses the `stage-context` class. These are typical examples, not placements.
 - **Nav buttons:** the WORKBOOK and PLAYBOOK buttons use the `nav-button` class with an inline icon (`nav-icon`). The button text stays navy because white text on this gold doesn't meet contrast guidelines.
 - **Workbook answer boxes:** yellow boxes with a gold left edge mark every place faculty write. Choose-several questions use the checkbox dropdown (`wb-multi` / `wb-dropdown`), which opens as a floating bubble so nothing on the page moves.
+- **AI label maker (Exercise 1):** faculty pick a level (No AI, AI-supported, AI-integrated), edit the student-facing line, and copy a label with the matching dots into a Blackboard assignment. **Copy label** copies formatted text; **Copy HTML** copies inline-styled HTML for Blackboard's HTML option, which is the more reliable route because Blackboard strips style blocks and classes. The defaults live in the `LEVELS` object in `workbook.js`.
 - **Reserved space:** Start Here has a commented-out "Want the full experience first?" card for a future self-paced version of the workshop. Uncomment it and add the link when that exists.
 - **Accessibility:** keep the viewport tag, alt text, and `visually-hidden` labels in place. Links that open a new tab include a hidden "(opens in a new tab)" note for screen readers. Hover motion on the nav buttons turns off for people who set reduced motion.
 

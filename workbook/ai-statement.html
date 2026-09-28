@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Write Your AI Course Policy – BE the Change: AI Literacy Faculty Workbook</title>
 <link rel="stylesheet" href="../css/styles.css?v=12">
-<link rel="stylesheet" href="workbook.css?v=11">
+<link rel="stylesheet" href="workbook.css?v=12">
 </head>
 <body class="guide-page intro-page workbook-page" data-workbook="ai-statement">
 
@@ -135,6 +135,33 @@
 </div>
 
 
+<div class="wb-card wb-tagmaker" id="tagmaker">
+<span class="wb-label">Make an AI label for Blackboard</span>
+<p>Choose a level, adjust the wording if you like, and copy the label into the top of the assignment instructions in Blackboard. Students see the same label, with the same dots, on every assignment.</p>
+
+<div class="wb-tag-controls">
+  <label for="tag-level">Level</label>
+  <select id="tag-level">
+    <option value="no">No AI</option>
+    <option value="sup" selected>AI-supported</option>
+    <option value="int">AI-integrated</option>
+  </select>
+  <label for="tag-text">What students see</label>
+  <textarea id="tag-text" rows="2"></textarea>
+  <label class="wb-tag-check"><input type="checkbox" id="tag-policy" checked> Add "See the AI Course Policy in the syllabus."</label>
+</div>
+
+<span class="wb-tag-previewlabel">Preview</span>
+<div class="wb-tag-preview" id="tag-preview" aria-live="polite"></div>
+
+<div class="wb-tag-buttons">
+  <button class="wb-button" type="button" id="tag-copy">Copy label</button>
+  <button class="wb-button secondary" type="button" id="tag-copy-html">Copy HTML</button>
+  <span class="wb-tag-status" aria-live="polite"></span>
+</div>
+<p class="wb-tag-help">Use <strong>Copy label</strong> to paste straight into the Blackboard editor. If the formatting doesn't hold, use <strong>Copy HTML</strong> and paste it into the editor's HTML option. The dots and wording come through either way.</p>
+</div>
+
 <h2 class="wb-step"><span>Step 4</span>How students tell you</h2>
 <div class="wb-question"><label for="disclose">How should students let you know when and how they used AI?<span class="wb-hint">A sentence at the end of the assignment? A note in the submission comments? Something else?</span></label><textarea id="disclose"></textarea><div class="wb-answer-print"></div></div>
 <div class="wb-question"><label for="sample">Write a sample sentence students could use.<span class="wb-hint">For example: "I used Copilot to brainstorm topic ideas. I chose the topic and wrote the paper myself."</span></label><textarea id="sample"></textarea><div class="wb-answer-print"></div></div>
@@ -207,6 +234,6 @@ After the draft, ask me what doesn&#x27;t sound like me, and revise.</pre>
 <p>&copy; 2026 Owensboro Community &amp; Technical College</p>
 </div></footer>
 
-<script src="workbook.js?v=4"></script>
+<script src="workbook.js?v=5"></script>
 </body>
 </html>
