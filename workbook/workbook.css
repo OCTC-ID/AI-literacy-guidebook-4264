@@ -470,3 +470,29 @@
 }
 #path { scroll-margin-top: 20px; }
 @media print { .wb-hero .hero-art, .wb-hero .hero-cta { display: none; } }
+
+/* ---------- Exercise 1: the three levels as cards with a dot gauge ---------- */
+.wb-lesson .wb-level {
+  margin: 18px 0;
+  padding: 16px 20px 14px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 52, 95, 0.06);
+}
+.wb-lesson .wb-level h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 6px;
+}
+.wb-lesson .wb-level p:last-child { margin-bottom: 0; }
+.wb-dots { display: inline-flex; gap: 4px; flex: none; }
+.wb-dots i {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--octc-blue);
+  border-radius: 50%;
+}
+.wb-dots i.on { background: var(--octc-gold); border-color: var(--octc-gold); }
