@@ -7,6 +7,7 @@ Two connected faculty resources for the **BE Framework**, five habits students d
 
 **View the playbook:** https://octc-id.github.io/AI-literacy-playbook/
 **View the workbook:** https://octc-id.github.io/AI-literacy-playbook/workbook/start-here.html
+**AI Label Maker:** https://octc-id.github.io/AI-literacy-playbook/ai-label/
 
 ## What this is
 
@@ -67,6 +68,8 @@ README.md                     This file
 css/styles.css                Shared styles for the playbook and the workbook
 images/                       Logo, playbook home art (open book),
                               and Start Here art (paper-pen.svg)
+ai-label/
+  index.html                  AI Label Maker (bookmarkable copy of the Exercise 1 tool)
 pages/
   welcome.html                Welcome to the BE Framework
   using-the-playbook.html     How to Use This Playbook
@@ -115,7 +118,7 @@ Questions, or interested in adapting the playbook? Contact Stephanie Self, Instr
 - **Stage settings:** the short line under each stage name on the BE pages ("First-Year Experience courses," etc.) uses the `stage-context` class. These are typical examples, not placements.
 - **Nav buttons:** the WORKBOOK and PLAYBOOK buttons use the `nav-button` class with an inline icon (`nav-icon`). The button text stays navy because white text on this gold doesn't meet contrast guidelines.
 - **Workbook answer boxes:** yellow boxes with a gold left edge mark every place faculty write. Choose-several questions use the checkbox dropdown (`wb-multi` / `wb-dropdown`), which opens as a floating bubble so nothing on the page moves.
-- **AI label maker (Exercise 1):** faculty pick a level (No AI, AI-supported, AI-integrated), edit the student-facing line, and copy a label with the matching dots into a Blackboard assignment. **Copy label** copies formatted text; **Copy HTML** copies inline-styled HTML for Blackboard's HTML option, which is the more reliable route because Blackboard strips style blocks and classes. The defaults live in the `LEVELS` object in `workbook.js`.
+- **AI label maker (Exercise 1 and `ai-label/`):** faculty pick a level (No AI, AI-supported, AI-integrated), edit the student-facing line, and copy a label with the matching dots into a Blackboard assignment. **Copy label** copies formatted text; **Copy HTML** copies inline-styled HTML for Blackboard's HTML option, which is the more reliable route because Blackboard strips style blocks and classes. The defaults live in the `LEVELS` object in `workbook.js`. The same maker also sits on its own page, `ai-label/index.html`, so faculty can bookmark it. Both copies use the same markup and `workbook.js`; if you change the maker in one, change the other.
 - **Reserved space:** Start Here has a commented-out "Want the full experience first?" card for a future self-paced version of the workshop. Uncomment it and add the link when that exists.
 - **Accessibility:** keep the viewport tag, alt text, and `visually-hidden` labels in place. Links that open a new tab include a hidden "(opens in a new tab)" note for screen readers. Hover motion on the nav buttons turns off for people who set reduced motion.
 

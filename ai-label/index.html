@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Label Maker – BE the Change: AI Literacy Faculty Workbook</title>
+<link rel="stylesheet" href="../css/styles.css?v=12">
+<link rel="stylesheet" href="../workbook/workbook.css?v=12">
+</head>
+<body class="guide-page intro-page workbook-page" data-workbook="ai-label">
+
+<header class="site-header"><div class="nav-shell">
+<a class="logo-link" aria-label="AI Literacy Playbook home" href="../index.html"><img alt="Owensboro Community and Technical College" src="../images/Owensboro_horiz_RGBrev.png"></a>
+<nav class="site-links" aria-label="Workbook navigation">
+<a href="../workbook/start-here.html">START HERE</a>
+<a href="../workbook/ai-statement.html">AI Course Policy</a>
+<a href="../workbook/one-change.html">One Change</a>
+<a href="../workbook/checkpoints.html">Checkpoints</a>
+<a href="../workbook/conversations.html">Conversations</a>
+<a class="nav-button" href="../index.html"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7c-2.5-2.2-5.6-2.6-9-1.4v12c3.4-1.2 6.5-.8 9 1.4z" fill="#fff"/><path d="M12 7c2.5-2.2 5.6-2.6 9-1.4v12c-3.4-1.2-6.5-.8-9 1.4z" fill="#fff"/><path d="M12 7v12"/></g></svg>PLAYBOOK</a>
+</nav></div></header>
+
+<main class="playbook-page">
+
+<div class="playbook-header">
+<div class="playbook-label">BE the Change: AI Literacy Faculty Workbook</div>
+<div class="be-title">AI Label Maker</div>
+<div class="be-subtitle">Mark the AI level at the top of each Blackboard assignment.</div>
+</div>
+<div class="behavior-bar">Workbook &nbsp;&middot;&nbsp; Tool</div>
+
+<div class="wb-card wb-tagmaker" id="tagmaker">
+<span class="wb-label">Make a label</span>
+<p>Choose a level, adjust the wording if you like, and copy the label into the top of the assignment instructions in Blackboard. Using the same label on every assignment helps students find the level quickly.</p>
+
+<div class="wb-tag-controls">
+  <label for="tag-level">Level</label>
+  <select id="tag-level">
+    <option value="no">No AI</option>
+    <option value="sup" selected>AI-supported</option>
+    <option value="int">AI-integrated</option>
+  </select>
+  <label for="tag-text">What students see</label>
+  <textarea id="tag-text" rows="3"></textarea>
+  <label class="wb-tag-check"><input type="checkbox" id="tag-policy" checked> Add "See the AI Course Policy in the syllabus."</label>
+</div>
+
+<span class="wb-tag-previewlabel">Preview</span>
+<div class="wb-tag-preview" id="tag-preview" aria-live="polite"></div>
+
+<div class="wb-tag-buttons">
+  <button class="wb-button" type="button" id="tag-copy">Copy label</button>
+  <button class="wb-button secondary" type="button" id="tag-copy-html">Copy HTML</button>
+  <span class="wb-tag-status" aria-live="polite"></span>
+</div>
+<p class="wb-tag-help">Use <strong>Copy label</strong> to paste straight into the Blackboard editor. If the formatting doesn't hold, use <strong>Copy HTML</strong> and paste it into the editor's HTML option. The dots and wording come through either way.</p>
+</div>
+
+<div class="section wb-lesson" style="margin-top:40px;">
+<span class="section-title">Which Level?</span>
+
+<div class="wb-level">
+<h3><span class="wb-dots" aria-hidden="true"><i></i><i></i></span>No AI</h3>
+<p>Students complete the work on their own. Use it when the skill itself is what the assignment teaches.</p>
+</div>
+
+<div class="wb-level">
+<h3><span class="wb-dots" aria-hidden="true"><i class="on"></i><i></i></span>AI-supported</h3>
+<p>Students can use AI for the parts you name. The thinking and the final product are theirs. Replace the brackets in the label with those parts.</p>
+</div>
+
+<div class="wb-level">
+<h3><span class="wb-dots" aria-hidden="true"><i class="on"></i><i class="on"></i></span>AI-integrated</h3>
+<p>Learning to use AI well is part of the assignment. Point students to the steps in the instructions that tell them how.</p>
+</div>
+
+<p>Choosing levels for a course for the first time? <a href="../workbook/ai-statement.html">Exercise 1: Write Your AI Course Policy</a> walks through it, assignment by assignment.</p>
+</div>
+
+</main>
+
+<footer class="site-footer"><div class="footer-shell">
+<img alt="Owensboro Community and Technical College" src="../images/Owensboro_horiz_RGBrev.png">
+<p>BE the Change: AI Literacy Faculty Workbook &bull; Draft &bull; October 2026</p>
+<p>&copy; 2026 Owensboro Community &amp; Technical College</p>
+</div></footer>
+
+<script src="../workbook/workbook.js?v=5"></script>
+</body>
+</html>
